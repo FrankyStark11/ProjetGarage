@@ -17,19 +17,22 @@
 	</div>
 			<!-- code section -->	
 		<div class="LeftBox" align="center">
-			<form method="post" action="">
+			
 			<h1>Gestion des codes Utilisateurs</h1>
-				<table>
+			<table>
+				<form method="post" action="/index.php/Admin/ChangeCode">
 					<tr>
 						<td>
 							<h2>Administration</h2>
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD"></td>
-						<td><button class="SauvegarderBtn" type="button" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
+						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input type="hidden" name="type" value="Admin" readonly></td>
+						<td><button class="SauvegarderBtn" type="submit" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
-
+				</form>
+				<form method="post" action="/index.php/Admin/ChangeCode">
 					<tr align="center">
 						<td><h2>__________________</h2></td>
 					</tr>
@@ -40,10 +43,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD"></td>
+						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input type="hidden" name="type" value="Proprio" readonly></td>
 						<td><button class="SauvegarderBtn" type="button" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
-
+				</form>
+				<form method="post" action="/index.php/Admin/ChangeCode">
 					<tr align="center">
 						<td><h2>__________________</h2></td>
 					</tr>
@@ -54,10 +59,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD"></td>
+						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input type="hidden" name="type" value="Ami" readonly></td>
 						<td><button class="SauvegarderBtn" type="button" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
-				</table>
+				</form>
+			</table>
 			</form>
 		</div>	
 		<div class="RightBox" align="center">
