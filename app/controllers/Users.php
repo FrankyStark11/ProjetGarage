@@ -8,8 +8,8 @@
 		
 		public function Password(){
 			$users = new modUsers();
-			//$retour = $users->ValiderPassword("allo");
-			echo "test";
+			$retour = $users->ValiderPassword($_POST["password"]);
+			echo $retour;
 		}
 	}
 ?>
