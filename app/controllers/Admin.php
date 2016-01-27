@@ -3,7 +3,7 @@
 	class Admin extends Controller
 	{
 		public function Accueil(){
-			parent::view('Users/index');
+			parent::view('Users/pagecode');
 		}
 	}
 ?>
