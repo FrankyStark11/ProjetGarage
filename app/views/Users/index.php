@@ -153,7 +153,7 @@
 				<!-- Header -->
 					<div id="header" class="skel-panels-fixed">
 						<div id="logo">
-							<h1><a href="index.php">SYSTEME RPI</a></h1>
+							<h1><a href="index.php">Systeme RPI</a></h1>
 						</div>
 					</div>
 				<!-- Extra -->

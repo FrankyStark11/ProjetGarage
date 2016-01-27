@@ -31,7 +31,7 @@
 				<!-- Header -->
 					<div id="header" class="skel-panels-fixed">
 						<div id="logo">
-							<h1><a href="index.html">SYSTEME RPI</a></h1>
+							<h1><a href="index.html">RPI</a></h1>
 						</div>
 					</div>
 				<!-- Header -->
