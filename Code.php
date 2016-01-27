@@ -6,7 +6,7 @@
 </head>
 
 <body>
-page de code a faire
+page de code a faire encore
 </body>
 
 </html>

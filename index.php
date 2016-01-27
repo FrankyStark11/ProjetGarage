@@ -59,6 +59,20 @@
 		system ("gpio write 24 on");
 		}
 
+	//fermer toutes les portes
+	function fermerToutesPortes(){
+		for ( $i = 25 ; $i <= 28 ; $i++ ) {
+		$gpio=$i-4;
+		$porte = system ( "gpio read ".$i);
+		if ($porte == "0"){
+				system ("gpio write ". $gpio ." off");
+				sleep ( 1 );
+				system ("gpio write ". $gpio ." on");
+			}
+
+		}
+	}
+
 	// Lecture du statut des portes
 	function statut() {
 	for ( $i = 25 ; $i <= 28 ; $i++ ) {
@@ -100,7 +114,7 @@
 			porte4();
 			break;
 		case 5:  //active la fermeture des portes ouvertes
-			for ( $i = 25 ; $i <= 28 ; $i++ ) {
+			/*for ( $i = 25 ; $i <= 28 ; $i++ ) {
 			$porte = system ( "gpio read ".$i);
 			$gpio=$i-4;
 			if ($porte == "0") {
@@ -108,7 +122,8 @@
 			sleep ( 1 );
 			system ("gpio write ".$gpio." on");
 			}
-			}
+			}*/
+			fermerToutesPortes();
 			break;
 		case 6; // arme|desarme email
 			$porte = system ("gpio read 1");
