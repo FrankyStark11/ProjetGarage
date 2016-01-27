@@ -41,7 +41,7 @@
 	// Activation porte 2
 	function porte2() {
 		system ("gpio write 22 off");
-		sleep ( 1 );
+		sleep ( 1);
 		system ("gpio write 22 on");
 		}
 
