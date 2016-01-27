@@ -9,7 +9,7 @@ class connectDB
 	*/
 	function connectDB()
 	{
-		$dir = 'sqlite:../app/controllers/BD/garage.bd';
+		$dir = 'sqlite:../app/bd/garage.bd.sqlite';
 		$db = new PDO($dir);
 		return $db;
 	}
