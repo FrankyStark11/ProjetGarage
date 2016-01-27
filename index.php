@@ -64,17 +64,17 @@
 	for ( $i = 25 ; $i <= 28 ; $i++ ) {
 		$porte = system ( "gpio read ".$i);
 		if ($porte == "0") {
-			?>   <img src="red.jpg" width=15%>
+			?>   <img src="Images/red.jpg" width=15%>
 			<?php  } else {
-			?>   <img src="green.jpg" width=15%>
+			?>   <img src="Images/green.jpg" width=15%>
 			<?php
 		}
 	}
 		$porte = system ( "gpio read 0");
 			if ($porte == "0") {
-				?><br /><img src="red.jpg" width=10%>
+				?><br /><img src="Images/red.jpg" width=10%>
 				<?php  } else {
-				?> <br /><img src="green.jpg" width=10%>
+				?> <br /><img src="Images/green.jpg" width=10%>
 				<?php
 				}
 	}
@@ -133,7 +133,7 @@
 	</div>
 	<br />
 	<a href="index.php?porte=0">
-		<img src="garage.jpg" width=90%>
+		<img src="Images/garage.jpg" width=90%>
 		<br />
 	</a>
 	<?php
@@ -142,7 +142,7 @@
 	$email = system ("gpio read 1") ;
 	if ($email == "1") {
 		?>
-		<img src="email.jpg" width=10% >
+		<img src="Images/email.jpg" width=10% >
 		<?php
 	}
 	?>
