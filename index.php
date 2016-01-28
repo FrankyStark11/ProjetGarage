@@ -117,16 +117,15 @@
 				<!-- Header -->
 					<div id="header" class="skel-panels-fixed">
 						<div id="logo">
-							<h1><a href="index.html">Systeme RPI</a></h1>
+							<h1><a href="index.php">Systeme RPI</a></h1>
 						</div>
 					</div>
-
 				<!-- Extra -->
 					<div id="extra">
 						<div class="container">
 							<div class="row no-collapse-1">
 								<section class="4u"> 
-								<a href="#" class="image featured">
+								<a href="index.php?porte=1" class="image featured">
 								<?php
 								$porte = system ( "gpio read 25");
 								if ($porte == "0") {
@@ -142,7 +141,7 @@
 										<p>Porte # 1 <br> Etat : Fermer</p> 
 									</div>
 								</section>
-								<section class="4u"> <a href="#" class="image featured">
+								<section class="4u"> <a href="index.php?porte=2" class="image featured">
 									<?php
 								$porte = system ( "gpio read 26");
 								if ($porte == "0") {
@@ -156,7 +155,7 @@
 									<div class="box">
 										<p>Porte # 2 <br> Etat : Fermer</p></div>
 								</section>
-								<section class="4u"> <a href="#" class="image featured">
+								<section class="4u"> <a href="index.php?porte=3" class="image featured">
 									<?php
 								$porte = system ( "gpio read 27");
 								if ($porte == "0") {
@@ -172,7 +171,7 @@
 								</section>
 							</div>
 							<div class="row no-collapse-1">
-								<section class="4u"> <a href="#" class="image featured">
+								<section class="4u"> <a href="index.php?porte=4" class="image featured">
 									<?php
 								$porte = system ( "gpio read 28");
 								if ($porte == "0") {
@@ -186,7 +185,7 @@
 									<div class="box">
 										<p>Porte # 4 <br> Etat : Fermer</p>
 								</section>
-								<section class="4u"> <a href="#" class="image featured">
+								<section class="4u"> <a href="index.php?porte=5" class="image featured">
 									<?php
 								$porte = system ( "gpio read 0");
 								if ($porte == "0") {
@@ -209,19 +208,5 @@
 						</div>
 					</div>
 	</div>
-	<!-- Copyright -->
-		<div id="copyright">
-			<div class="container">
-				<div class="copyright">
-					<p>Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)</p>
-					<ul class="icons">
-						<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
-						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
-						<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
 	</body>
 </html>
