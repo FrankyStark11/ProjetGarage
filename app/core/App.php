@@ -2,7 +2,7 @@
 
 class App
 {
-	protected $controller = 'Guest'; //controleur par defaut
+	protected $controller = 'Admin'; //controleur par defaut
 	protected $method = 'Accueil';
 	protected $params = [];
 
