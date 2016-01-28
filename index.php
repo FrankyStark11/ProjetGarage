@@ -155,6 +155,11 @@
 						<div id="logo">
 							<h1><a href="index.php">SYSTEME RPI</a></h1>
 						</div>
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="index.html">déconnexion</a></li>
+							</ul>
+						</nav>
 					</div>
 				<!-- Extra -->
 					<div id="extra">
@@ -235,10 +240,10 @@
 									<div class="box">
 										<p>Porte # 5 <br> Etat : Fermer</p>
 								</section>
-								<section class="4u"> <a href="#" class="image featured"><img src="images/garage.jpg" alt=""></a>
+								<section class="4u"> <a href="#" class="image featured"><img src="images/red.jpg" alt=""></a>
 									<div class="box">
-										<p>Toutes les portes</p>
-										<a href="#" class="button">Fermer</a></div>
+										<p>Systeme activé</p>
+									</div>
 								</section>
 							</div>
 						</div>
