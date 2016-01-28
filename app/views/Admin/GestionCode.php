@@ -102,7 +102,11 @@
 								<td class="config"><input class="TextMpd" type="text" placeholder="# téléphone" name="telephone"></td>
 							</tr>
 							<tr>
-								<td class="config"><button class="ChangerBtn" type="submit" value="Sauvegarder" ><span>Changer </span></button></td>
+								<td class="config">
+									<select class="TextMdp" name="lstDist">
+										
+									</select>
+								</td>
 							</tr>
 						</form>
 

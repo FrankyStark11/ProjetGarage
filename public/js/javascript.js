@@ -107,3 +107,99 @@ function RetirerTempsZoneDelais(){
 
       ZoneDelais.value = MinAcc + ":" + SecAcc;
 }
+
+/*
+	Permet de créer les inputs pour les distributeurs
+*/
+function CreerNouvDist(nombre){
+	table = document.getElementById("tblDistributeurs");
+	
+	
+	for(i = 0; i < nombre; i++){
+		code = makeid();
+		
+		var tr_0 = document.createElement('tr');
+		tr_0.id = "tr" + code;
+
+		var td_0 = document.createElement('td');
+
+		var input_0 = document.createElement('input');
+		input_0.type = "text";
+		input_0.className = "TextMdp";
+		input_0.name = "nom";
+		input_0.placeholder = "Distributeur";
+		td_0.appendChild( input_0 );
+
+		tr_0.appendChild( td_0 );
+
+
+		var td_1 = document.createElement('td');
+
+		var input_1 = document.createElement('input');
+		input_1.name = "extention";
+		input_1.className = "TextMdp";
+		input_1.type = "text";
+		input_1.placeholder = "@msg.distributeur.com";
+		td_1.appendChild( input_1 );
+
+		tr_0.appendChild( td_1 );
+
+
+		var td_2 = document.createElement('td');
+
+		var input_2 = document.createElement('input');
+		input_2.type = "button";
+		input_2.className = "ChangerBtn";
+		input_2.value = "supp";
+		input_2.name = code;
+		input_2.onclick=function(){DeleteDistributeur(this.name)}
+		
+		td_2.appendChild( input_2 );
+
+		tr_0.appendChild( td_2 );
+
+		document.body.appendChild( tr_0 );
+
+		table.appendChild( tr_0 );
+		
+	}
+}
+
+/*
+	Supprime un distributeur
+*/
+function DeleteDistributeur(string){
+	tr = document.getElementById("tr" + string);
+	table = document.getElementById("tblDistributeurs");
+	
+	table.removeChild(tr);
+}
+
+/*
+	Génère une string aléatoire
+*/
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 50; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+/*
+	Permet de garnir la liste de distributeurs dans la page des modifications des distributeurs
+*/
+function GarnirInputDistributeurs(distributeurs){
+	table = document.getElementById("tblDistributeurs");
+}
+
+/*
+	Permet d'initialiser la page des distributeurs
+*/
+function InitialiserEditDistributeur(nombre, distributeurs){
+	CreerNouvDist(nombre);
+	GarnirInputDistributeurs(distributeurs);
+}
