@@ -111,6 +111,42 @@
 	</head>
 	<body>
 
+	<?php
+		// Activation des portes
+		switch ($_GET["porte"]) {
+		case 1: // Active la porte 1
+			porte1();
+			break;
+		case 2: // Active la porte 2
+			porte2();
+			break;
+		case 3: // Active la porte 3
+			porte3();
+			break;
+		case 4: // Active la porte 4
+			porte4();
+			break;
+		case 5:  //active la fermeture des portes ouvertes
+			for ( $i = 25 ; $i <= 28 ; $i++ ) {
+			$porte = system ( "gpio read ".$i);
+			$gpio=$i-4;
+			if ($porte == "0") {
+			system ("gpio write ".$gpio." off");
+			sleep ( 1 );
+			system ("gpio write ".$gpio." on");
+			}
+			}
+			break;
+		case 6; // arme|desarme email
+			$porte = system ("gpio read 1");
+			if ($porte == "0") {
+				system ("gpio write 1 1");
+			} else {
+				system ("gpio write 1 0");
+			}
+	}
+	?>
+
 		<!-- Wrapper -->
 			<div class="wrapper style1">
 
