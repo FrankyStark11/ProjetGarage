@@ -42,5 +42,17 @@
 			$sql->execute();
 			$db = null;
 		}
+		
+		function mdpOublie(){
+			$message = 'hello from the other side!';
+		
+			$to      = '450-421-1567@msg.telus.com';
+			$subject = 'Réinitialisation administrateur';
+			$headers = 'From: webmaster@example.com' . "\r\n" .
+			'Reply-To: webmaster@example.com' . "\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+			mail($to, $subject, $message, $headers);
+		}
 	}
 ?>
