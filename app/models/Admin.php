@@ -63,16 +63,35 @@
 			$db = null;
 		}
 		
-		function mdpOublie(){
-			$message = 'hello from the other side!';
+		function ResetAdmin($password){
+			$db = $this->connectDB();
+			
+			$sql = $db->prepare("UPDATE Utilisateurs SET Code = :password WHERE Nom = 'Administrateur'");
+			
+			$sql->bindValue(":password", crypt($password,"st"));
+			
+			$sql->execute();
+			$db = null;
+
+		}
 		
-			$to      = '450-421-1567@msg.telus.com';
+		function mdpOublie(){
+			$prov = $_SERVER['REMOTE_ADDR'];
+			$ip = "http://".$_SERVER['SERVER_ADDR'];
+			
+			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
+		
+			//$to      = '450-421-1567@msg.telus.com';
+			$to      = 'Otid91@gmail.com';
+			//$to      = '514-914-9108@msg.videotron.com';
+
 			$subject = 'Réinitialisation administrateur';
 			$headers = 'From: webmaster@example.com' . "\r\n" .
 			'Reply-To: webmaster@example.com' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 
 			mail($to, $subject, $message, $headers);
+			
 		}
 	}
 ?>

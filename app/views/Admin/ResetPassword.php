@@ -13,7 +13,7 @@
 	<div class="NavBar">
 	</div>
 		<div class="CenterCode">
-			<form method="post" action="/index.php/Admin/ResetPassword">
+			<form method="post" action="/index.php/Admin/resetmdp">
 				<table>
 					<tr>
 						<td><input class="digit" type="button" name="1" value="1" onclick="feedPassword(this)"></td>
@@ -38,10 +38,10 @@
 				</table>
 				<table>
 					<tr>
-						<td><input type="hidden" name="password" id="idpassword" readonly></td>
+						<td><input type="text" name="password" id="idpassword" readonly></td>
 					</tr>
 					<tr>
-						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confimer </span></button></td>
+						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Réinitialiser </span></button></td>
 					</tr>
 				</table>
 			</form>

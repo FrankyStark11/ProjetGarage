@@ -26,9 +26,19 @@
 		public function mdpOublie(){
 			$admin = new modAdmins();
 			$admin->mdpOublie();
+			parent::view('Users/Index');
+		}
+		
+		public function showResetPassword(){
+			parent::view('Admin/ResetPassword');
 		}
 		
 		public function resetmdp(){
+			$admin = new modAdmins();
+			$admin->ResetAdmin($_POST["password"]);
+			parent::view('Users/Index');
 		}
+		
+		
 	}
 ?>
