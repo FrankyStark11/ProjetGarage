@@ -20,7 +20,7 @@
 			}
 			else
 			{
-				parent::view('Users/PageCode');
+				parent::view('Users/Index');
 			}
 		}
 
