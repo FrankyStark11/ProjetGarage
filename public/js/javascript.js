@@ -194,6 +194,14 @@ function makeid()
 */
 function GarnirInputDistributeurs(distributeurs){
 	table = document.getElementById("tblDistributeurs");
+	
+	nom = document.getElementsByName("nom");
+	extention = document.getElementsByName("extention");
+	
+	for(i = 0; i < distributeurs.length; i++){
+		nom[i].value = distributeurs[i]["Nom"];
+		extention[i].value = distributeurs[i]["Extention"];
+	}
 }
 
 /*
