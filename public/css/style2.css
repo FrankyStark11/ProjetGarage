@@ -1,0 +1,91 @@
+body{
+		padding-top: 10em;
+		padding-bottom: 2em;
+		background: url(../images/bg.jpg) no-repeat center top;
+		background-size: cover;
+		background-attachment: fixed;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+	}
+
+div.CenterCode{
+	width: 303px;
+	height: auto;
+
+	position: fixed;
+	left: 50%;
+	margin-left: -151px;
+}
+
+.digit{
+	background-color: #838B8F;
+	font-size: 25px;
+	text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: -1px;
+    float: left;
+    transition: all 0.5s;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+.digit:hover {
+    background-color: #62686B;
+}
+
+.digit:active {
+  background-color: #44484A;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.confirmer{
+	background-color: #838B8F;
+	font-size: 28px;
+	text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 303px;
+    height: 100px;
+    display: inline-block;
+    transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.confirmer span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.confirmer span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.confirmer:hover{
+	background-color: #3e8e41;
+}
+
+.confirmer:hover span {
+  padding-right: 25px;
+}
+
+.confirmer:hover span:after {
+  opacity: 1;
+  right: 0;
+}
