@@ -12,9 +12,7 @@
 	<body onload="initialiser()">
 	<div class="NavBar">
 		<ul>
-		  <li><a href="/index.php/Users/ControleSysteme"> page de controle </a></li>
-		  <li><a href="/index.php/Admin/GestionCodes"> page de gestion codes</a></li>
-		  <li><a href="/index.php/Admin/Accueil"> page de Login</a></li>
+		  <li><a href="/index.php/Admin/Accueil"> Quitter </a></li>
 		</ul>
 	</div>
 			<!-- code section -->	
@@ -49,7 +47,7 @@
 					<tr align="center">
 						<td><h2>__________________</h2></td>
 					</tr>
-					
+
 					<tr>
 						<td>
 							<h2>Ami</h2>
