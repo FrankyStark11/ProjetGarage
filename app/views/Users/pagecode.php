@@ -10,10 +10,13 @@
 
 	</head>
 	<body onload="initialiser()">
-			<!-- code section -->	
-			<a href="/index.php/Users/ControleSysteme"> page de controle </a><br>
-			<a href="/index.php/Admin/GestionCodes"> page de gestion codes</a><br>
-			<a href="/index.php/Admin/Accueil"> page de Login</a>
+	<div class="NavBar">
+		<ul>
+		  <li><a href="/index.php/Users/ControleSysteme"> page de controle </a></li>
+		  <li><a href="/index.php/Admin/GestionCodes"> page de gestion codes</a></li>
+		  <li><a href="/index.php/Admin/Accueil"> page de Login</a></li>
+		</ul>
+	</div>
 		<div class="CenterCode">
 			<form method="post" action="/index.php/Users/Password">
 				<table>
