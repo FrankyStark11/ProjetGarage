@@ -11,5 +11,9 @@
 			$retour = $users->ValiderPassword($_POST["password"]);
 			echo $retour;
 		}
+
+		public function ControleSysteme(){
+			parent::view('Users/Controle');
+		}
 	}
 ?>

@@ -4,13 +4,16 @@
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-		<script src="js/javascript.js"></script>
+		<script src="/js/javascript.js"></script>
 
-		<link rel="stylesheet" href="css/style2.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style2.css" />
 
 	</head>
 	<body onload="initialiser()">
 			<!-- code section -->	
+			<a href="/index.php/Users/ControleSysteme"> page de controle </a><br>
+			<a href="/index.php/Admin/GestionCodes"> page de gestion codes</a><br>
+			<a href="/index.php/Admin/Accueil"> page de Login</a>
 		<div class="CenterCode">
 			<form method="post" action="/index.php/Users/Password">
 				<table>

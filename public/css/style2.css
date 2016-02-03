@@ -1,5 +1,5 @@
 body{
-		padding-top: 10em;
+		padding-top: 10%;
 		padding-bottom: 2em;
 		background: url(../images/bg.jpg) no-repeat center top;
 		background-size: cover;
@@ -15,6 +15,42 @@ div.CenterCode{
 	position: fixed;
 	left: 50%;
 	margin-left: -151px;
+}
+
+div.LeftBox{
+	width: 450px;
+	height: auto;
+
+	padding: 10px;
+
+	position: fixed;
+	left: 50%;
+	margin-left: -500px;
+
+	border-width: 0px;
+	border-radius: 5px;
+	border-style: solid;
+
+	background-image: url(../images/MetalPattern.png);
+	background-size: auto;
+}
+
+div.RightBox{
+	width: 450px;
+	height: auto;
+
+	padding: 20px;
+
+	position: fixed;
+	left: 50%;
+	margin-right: -500px;
+
+	border-width: 0px;
+	border-radius: 5px;
+	border-style: solid;
+
+	background-image: url(../images/MetalPattern.png);
+	background-size: auto;
 }
 
 .digit{
@@ -46,6 +82,34 @@ div.CenterCode{
   transform: translateY(2px);
 }
 
+.digit-time{
+	background-color: #838B8F;
+	font-size: 25px;
+	text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    margin: 2px;
+    float: left;
+    transition: all 0.3s;
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+.digit-time:hover {
+    background-color: #62686B;
+}
+
+.digit-time:active {
+  background-color: #44484A;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
 .confirmer{
 	background-color: #838B8F;
 	font-size: 28px;
@@ -89,15 +153,71 @@ button.confirmer:hover{
   right: 0;
 }
 
+
 .TextMpd{
 	border-radius: 5px;
 	border-width: 0px;
 
 	height: 50px;
-	background-color: #3e8e41;
+	width: 200px;
+	background-color: #838B8F;
 	font-size: 20px;
+
+	outline-style: none;
+
+	text-align: center;
+
+	color: white;
+}
+
+.SauvegarderBtn{
+	background-color: #838B8F;
+	font-size: 28px;
+	text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    transition: all 0.5s;
+  cursor: pointer;
+}
+.SauvegarderBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.SauvegarderBtn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.SauvegarderBtn:hover{
+	background-color: #3e8e41;
+}
+
+.SauvegarderBtn:hover span {
+  padding-right: 25px;
+}
+
+.SauvegarderBtn:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 h2{
 	color: white;
+	font-family: monospace;
+}
+h1{
+	color: white;
+	font-family: monospace;
 }
