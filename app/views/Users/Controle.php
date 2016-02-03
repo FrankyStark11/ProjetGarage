@@ -27,7 +27,7 @@
 									?> 
 
 									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -35,7 +35,7 @@
 									?>  
 
 									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -59,7 +59,7 @@
 									?> 
 
 									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -67,7 +67,7 @@
 									?>  
 
 									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -91,7 +91,7 @@
 									?> 
 
 									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input  type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -99,7 +99,7 @@
 									?>  
 
 									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -123,7 +123,7 @@
 									?> 
 
 									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
@@ -131,7 +131,7 @@
 									?>  
 
 									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
+										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
 										<label for="slideThree"></label>
 									</div>
 
