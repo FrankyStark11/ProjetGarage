@@ -14,164 +14,109 @@
 	</div>
 	<div class="CtnPorte">
 			<div class="InfoPorte" align="center">
-				<table>
-					<tr>
-						<td>
-							Etat de la porte 1 : 
-						</td>
-						<td>
+				<h1>Etat de la porte 1 </h1>
+					<h2>
 						<?php
 								$porte = system ( "gpio read 25");
 								if ($porte == "0") {
 									?> 
 
-									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Fermer
 
 									<?php  } else {
 									?>  
 
-									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Ouvert
 
 									<?php
 								}
-								?>
-						</td>
-					</tr>
-				</table>
+						?>
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
 			</div>
 			<div class="InfoPorte" align="center">
-				<table>
-					<tr>
-						<td>
-							Etat de la porte 2 : 
-						</td>
-						<td>
+				<h1>Etat de la porte 2 </h1>
+					<h2>
 						<?php
 								$porte = system ( "gpio read 26");
 								if ($porte == "0") {
 									?> 
 
-									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Fermer
 
 									<?php  } else {
 									?>  
 
-									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Ouvert
 
 									<?php
 								}
-								?>
-						</td>
-					</tr>
-				</table>
+						?>
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
 			</div>
 			<div class="InfoPorte" align="center">
-				<table>
-					<tr>
-						<td>
-							Etat de la porte 3 : 
-						</td>
-						<td>
+				<h1>Etat de la porte 3 </h1>
+					<h2>
 						<?php
 								$porte = system ( "gpio read 27");
 								if ($porte == "0") {
 									?> 
 
-									<div class="slideThree">	
-										<input  type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Fermer
 
 									<?php  } else {
 									?>  
 
-									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Ouvert
 
 									<?php
 								}
-								?>
-						</td>
-					</tr>
-				</table>
+						?>
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
 			</div>
 			<div class="InfoPorte" align="center">
-				<table>
-					<tr>
-						<td>
-							Etat de la porte 4 : 
-						</td>
-						<td>
+				<h1>Etat de la porte 4 </h1>
+					<h2>
 						<?php
 								$porte = system ( "gpio read 28");
 								if ($porte == "0") {
 									?> 
 
-									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Fermer
 
 									<?php  } else {
 									?>  
 
-									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Ouvert
 
 									<?php
 								}
-								?>
-						</td>
-					</tr>
-				</table>
+						?>
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
 			</div>
 			<div class="InfoPorte" align="center">
-				<table>
-					<tr>
-						<td>
-							Etat de la porte 5 : 
-						</td>
-						<td>
+				<h1>Etat de la porte latéral </h1>
+					<h2>
 						<?php
 								$porte = system ( "gpio read 0");
 								if ($porte == "0") {
 									?> 
 
-									<div class="slideThree">	
-										<input checked type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Fermer
 
 									<?php  } else {
 									?>  
 
-									<div class="slideThree">	
-										<input type="checkbox" value="None" id="slideThree" name="check" checked />
-										<label for="slideThree"></label>
-									</div>
+									Ouvert
 
 									<?php
 								}
-								?>
-						</td>
-					</tr>
-				</table>
+						?>
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
 			</div>
 	</div>	
 
