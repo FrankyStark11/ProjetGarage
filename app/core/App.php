@@ -8,13 +8,15 @@ class App
 
 	public function __construct()
 	{
-		$url = $this->parseUrl();
 
-		if (file_exists('../app/controllers/' . $url[0] . '.php'))
-		{
-			$this->controller = $url[0];
-			unset($url[0]);
-		}
+		$url = $this->parseUrl();
+		if(isset($url[0])){
+			if(file_exists('../app/controllers/' . $url[0] . '.php'))
+	    	{
+	            $this->controller = $url[0];
+	            unset($url[0]);
+	    	}
+	    }
 
 		require_once '../app/controllers/' . $this->controller . '.php';
 
@@ -26,10 +28,10 @@ class App
 				unset($url[1]);
 			}
 		}
-
 		$this->params = $url ? array_values ($url) : [] ;
 
 		call_user_func_array([new $this->controller, $this->method], $this->params );
+
 	}
 
 	public function parseUrl()
