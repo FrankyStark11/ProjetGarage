@@ -14,14 +14,18 @@
 			if ($retour["Type"] == '2') {
 				parent::view('Users/Controle');
 			}
+			elseif($retour["Type"] == '1'){
+				parent::view('Users/Code');
+			}
 			else
 			{
-				parent::view('Users/Code');
+				parent::view('Users/PageCode');
 			}
 		}
 
 		public function ControleSysteme(){
 			parent::view('Users/Controle');
+
 		}
 	}
 ?>

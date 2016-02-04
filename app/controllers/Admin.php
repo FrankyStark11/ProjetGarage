@@ -14,7 +14,7 @@
 		public function ChangeCode(){
 			$admin = new modAdmins();
 			$admin->ChangeCode($_POST["password"], $_POST["type"]);
-			//$this->GestionCodes();
+			$this->GestionCodes();
 		}
 	}
 ?>

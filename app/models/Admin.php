@@ -31,12 +31,8 @@
 		}
 		
 		function ChangeCode($password, $type){
-			echo $password;
-			echo $type;
-			
+
 			$db = $this->connectDB();
-			
-			print_r($db);
 			
 			$sql = $db->prepare("UPDATE Utilisateurs SET Code = :password WHERE Nom = :type");
 			
@@ -45,10 +41,6 @@
 			
 			$sql->execute();
 			$db = null;
-			
-			print_r($sql);
-			
-			echo "allo";
 		}
 	}
 ?>
