@@ -9,17 +9,16 @@ body{
 	}
 
 div.CtnPorte{
-	width: 500px;
+	width: 100%;
 	height: auto;
-
-	position: relative;
-	left: 50%;
-	margin-left: -151px;
+  padding: 20px;
+  margin-top: 8%;
 }
 
 div.InfoPorte{
 	width: 300px;
 	height: auto;
+  display: inline-block;
 
 	padding: 5px;
     padding-bottom: 15px;
@@ -29,6 +28,7 @@ div.InfoPorte{
 
 	border-radius: 5px;
 
+  margin: 1em;
 	margin-bottom: 30px;
 }
 

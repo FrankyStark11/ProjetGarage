@@ -2,6 +2,7 @@
 
 <head>
 	<title>Garage à Denis</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="/css/style2.css" />
 </head>
 
@@ -12,10 +13,10 @@
 		  <li><a href="/index.php/Admin/Accueil"> Quitter</a></li>
 		</ul>
 	</div>
-	<div class="CtnPorte">
+	<div class="CtnPorte" align="center">
 			<div class="InfoPorte" align="center">
-				<h1>Etat de la porte 1 </h1>
-					<h2>
+				<h1>Porte 1 </h1>
+					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 25");
 								if ($porte == "0") {
@@ -32,11 +33,26 @@
 								}
 						?>
 					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
+					<?php
+								$porte = system ( "gpio read 25");
+								if ($porte == "0") {
+									?> 
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+
+									<?php  } else {
+									?>  
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+
+									<?php
+								}
+						?>
+				
 			</div>
 			<div class="InfoPorte" align="center">
-				<h1>Etat de la porte 2 </h1>
-					<h2>
+				<h1>Porte 2 </h1>
+					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 26");
 								if ($porte == "0") {
@@ -53,11 +69,26 @@
 								}
 						?>
 					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
+					<?php
+								$porte = system ( "gpio read 26");
+								if ($porte == "0") {
+									?> 
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+
+									<?php  } else {
+									?>  
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+
+									<?php
+								}
+						?>
+				
 			</div>
 			<div class="InfoPorte" align="center">
-				<h1>Etat de la porte 3 </h1>
-					<h2>
+				<h1>Porte 3 </h1>
+					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 27");
 								if ($porte == "0") {
@@ -74,11 +105,26 @@
 								}
 						?>
 					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
+					<?php
+								$porte = system ( "gpio read 27");
+								if ($porte == "0") {
+									?> 
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+
+									<?php  } else {
+									?>  
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+
+									<?php
+								}
+						?>
+				
 			</div>
 			<div class="InfoPorte" align="center">
-				<h1>Etat de la porte 4 </h1>
-					<h2>
+				<h1>Porte 4 </h1>
+					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 28");
 								if ($porte == "0") {
@@ -95,11 +141,26 @@
 								}
 						?>
 					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
+					<?php
+								$porte = system ( "gpio read 28");
+								if ($porte == "0") {
+									?> 
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+
+									<?php  } else {
+									?>  
+
+									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+
+									<?php
+								}
+						?>
+				
 			</div>
 			<div class="InfoPorte" align="center">
-				<h1>Etat de la porte latéral </h1>
-					<h2>
+				<h1>Porte latéral </h1>
+					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 0");
 								if ($porte == "0") {
@@ -115,8 +176,7 @@
 									<?php
 								}
 						?>
-					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span>Go</span></button>
+					</h2>			
 			</div>
 	</div>	
 
