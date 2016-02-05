@@ -36,7 +36,7 @@
 			
 			$sql = $db->prepare("UPDATE Utilisateurs SET Code = :password WHERE Nom = :type");
 			
-			$sql->bindValue(":password", $password);
+			$sql->bindValue(":password", crypt($password,"st"));
 			$sql->bindValue(":type", $type);
 			
 			$sql->execute();
