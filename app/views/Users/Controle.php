@@ -13,7 +13,7 @@
 		  <li><a href="/index.php/Admin/Accueil"> Quitter</a></li>
 		</ul>
 	</div>
-	<div class="CtnPorte" align="center">
+	<div class="Ctn" align="center">
 			<div class="InfoPorte" align="center">
 				<h1>Porte 1 </h1>
 					<h2> Etat : 
