@@ -28,7 +28,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input class="TextMpd" type="number" pattern="\d*" placeholder="MPD" name="password"></td>
 						<td><input type="hidden" name="type" value="Administrateur" readonly></td>
 						<td><button class="SauvegarderBtn" type="submit" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>

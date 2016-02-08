@@ -10,6 +10,11 @@
 
 	</head>
 	<body onload="initialiser()">
+	<div class="NavBar">
+		<ul>
+		  <li><a href="/index.php/Users/ControleSysteme"> Mot de passe oublié </a></li>
+		</ul>
+	</div>
 		<div class="CenterCode">
 			<form method="post" action="/index.php/Users/Password">
 				<table>
@@ -28,10 +33,10 @@
 						<td><input class="digit" type="button" name="8" value="8" onclick="feedPassword(this)"></td>
 						<td><input class="digit" type="button" name="9" value="9" onclick="feedPassword(this)"></td>
 					</tr>
-					<tr>
-						<td><input class="digit" type="button" name="#" value="#" onclick="feedPassword(this)"></td>
+					<tr align="center">
+						<td><input class="digit" disabled type="button" name="0" value="" ></td>
 						<td><input class="digit" type="button" name="0" value="0" onclick="feedPassword(this)"></td>
-						<td><input class="digit" type="button" name="*" value="*" onclick="feedPassword(this)"></td>
+						<td><input class="digit" type="button" name="9" value="<=" onclick="feedPassword(this)"></td>
 					</tr>
 				</table>
 				<table>
