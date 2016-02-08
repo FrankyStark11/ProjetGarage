@@ -8,7 +8,7 @@
 	{
 		function ValiderPassword($password){
 
-			$dir = 'sqlite:../app/bd/garage.bd.sqlite';
+			$dir = 'sqlite:../app/bd/garage.sqlite';
 			$db = new PDO($dir);
 
 			if (is_null($db)) {
@@ -27,6 +27,36 @@
 			}
 
 			return $result;
+		}
+
+		function AjouterUtilisateur(){
+
+			$dir = 'sqlite:../app/bd/garage.sqlite';
+			$db = new PDO($dir);
+
+			$NOM = "";
+			$CODE = crypt("","st");
+			$TYPE = 0;
+
+			if(is_null($db)){
+				echo "Erreur de connextion";
+			}
+			else
+			{
+				//creation de la requete preparé
+				$sql = $db->prepare("INSERT INTO Utilisateurs (Nom,Code,Type) VALUES (:nom,:code,:type)");
+
+				//ajout des valeurs pa variable predefinie
+				$sql->bindValue(":nom",$NOM);
+				$sql->bindValue(":code",$CODE);
+				$sql->bindValue(":type",$TYPE);
+
+				//execution de la requete d'ajout
+				$sql->execute();
+
+				echo "l'utilisateur " . $NOM . " est ajouté !";
+			}
+
 		}
 	}
 ?>

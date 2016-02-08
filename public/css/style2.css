@@ -21,12 +21,12 @@ div.Ctn{
 
 div.InfoPorte{
 	width: 300px;
-	height: auto;
+  height: 200px;
 
-  display: inline-block;
+  float: left;
 
 	padding: 5px;
-    padding-bottom: 15px;
+  padding-bottom: 10px;
 
 	background-image: url(../images/MetalPattern.png);
 	background-size: auto;
@@ -34,7 +34,7 @@ div.InfoPorte{
 	border-radius: 5px;
 
   margin: 1em;
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 div.InfoConfig{

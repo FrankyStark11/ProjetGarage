@@ -176,7 +176,28 @@
 									<?php
 								}
 						?>
-					</h2>			
+					</h2>
+					<?php
+								$porte = system ( "gpio read 0");
+								if ($porte == "0") {
+									?> 
+
+									<button disabled type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+
+									<?php  } else {
+									?>  
+
+									<button disabled type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+
+									<?php
+								}
+						?>			
+			</div>
+			<div class="InfoPorte" align="center">
+				<h1>Ajouter </h1>
+				<h2> nouvelle entrée 
+					</h2>
+				<button type="button" value="Action" class="SauvegarderBtn"><span> + </span></button>			
 			</div>
 	</div>	
 
