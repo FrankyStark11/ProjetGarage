@@ -23,7 +23,7 @@ div.InfoPorte{
 	width: 300px;
   height: 200px;
 
-  float: left;
+  display: inline-block;
 
 	padding: 5px;
   padding-bottom: 10px;
@@ -121,9 +121,12 @@ div.ConfigBox{
 	font-size: 25px;
 	text-align: center;
     text-decoration: none;
+
     color: white;
-    border: none;
-    border-radius: 10px;
+    border-width: 0px;
+    border-style: solid;
+    
+
     width: 100px;
     height: 100px;
     margin: -1px;
@@ -182,7 +185,7 @@ div.ConfigBox{
     text-decoration: none;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 2px;
     width: 303px;
     height: 100px;
     display: inline-block;
@@ -234,6 +237,8 @@ button.confirmer:hover{
 	text-align: center;
 
 	color: white;
+
+  -moz-appearance:textfield;
 }
 
 .SauvegarderBtn{

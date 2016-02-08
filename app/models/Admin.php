@@ -29,6 +29,26 @@
 
 			return $result;
 		}
+
+		function GetAllPin(){
+
+			$db = $this->connectDB();
+
+			if (is_null($db)) {
+				echo "erreur de la BD";
+			}
+			else
+			{
+				$sql = $db->prepare("SELECT No_pin,Nom FROM GPIO WHERE Mode = :mode"); 
+				$sql->bindValue(":mode","in"); 
+				$sql->execute(); 
+
+				$result =  $sql->fetchAll(PDO::FETCH_ASSOC);
+
+				$db = null; //vide la connection
+			}
+			return $result;
+		}
 		
 		function ChangeCode($password, $type){
 

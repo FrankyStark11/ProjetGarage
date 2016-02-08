@@ -1,13 +1,35 @@
 <?php
 	
 ?>
-
 <html>
 
 <head>
 	<title>Garage à Denis</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="/css/style2.css" />
+	<script src="/js/javascript.js"></script>
+
+	<script type="text/javascript">
+		var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+            	//var myNode = document.getElementById("DivInfo");
+				//while (myNode.firstChild) {
+    			//myNode.removeChild(myNode.firstChild);
+}
+                for (x in xmlhttp.responseText ){
+                	var Nom = x['Nom'] ;
+                	var Pin = x['No_pin'] ;
+
+                	AjouterDivInfoPorte(Pin,Nom);
+                }
+            }
+        };
+        xmlhttp.open("get", "/index.php/Admin/GetAllPin", true);
+        xmlhttp.send();
+	</script>
+
 </head>
 
 <body>
@@ -17,11 +39,13 @@
 		  <li><a href="/index.php/Admin/Accueil"> Quitter</a></li>
 		</ul>
 	</div>
-	<div class="Ctn" align="center">
+	<div class="Ctn" align="center" id="DivInfo">
 			<div class="InfoPorte" align="center">
+			<input type="hidden" value="MP1">
 				<h1>Porte 1 </h1>
 					<h2> Etat : 
 						<?php
+
 								$porte = system ( "gpio read 25");
 								if ($porte == "0") {
 									?> 
@@ -54,6 +78,7 @@
 						?>
 				
 			</div>
+
 			<div class="InfoPorte" align="center">
 				<h1>Porte 2 </h1>
 					<h2> Etat : 
@@ -201,7 +226,7 @@
 				<h1>Ajouter </h1>
 				<h2> nouvelle entrée 
 					</h2>
-				<button type="button" value="Action" class="SauvegarderBtn"><span> + </span></button>			
+				<button type="button" value="Action" onclick="AjouterDivInfoPorte(21,'MP1')" class="SauvegarderBtn"><span> + </span></button>			
 			</div>
 	</div>	
 

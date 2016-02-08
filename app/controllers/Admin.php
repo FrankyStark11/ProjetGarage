@@ -10,6 +10,12 @@
 		public function GestionCodes(){
 			parent::view('Users/Code');
 		}
+
+		public function GetAllPin(){
+			$admin = new modAdmins();
+			$result = $admin->GetAllPin();
+			echo json_encode($result);
+		}
 		
 		public function ChangeCode(){
 			$admin = new modAdmins();

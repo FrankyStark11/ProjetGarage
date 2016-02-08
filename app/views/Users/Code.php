@@ -44,7 +44,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="MPD" name="password"></td>
 						<td><input type="hidden" name="type" value="Proprio" readonly></td>
 						<td><button class="SauvegarderBtn" type="submit" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
@@ -60,7 +60,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
+						<td><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="MPD" name="password"></td>
 						<td><input type="hidden" name="type" value="Ami" readonly></td>
 						<td><button class="SauvegarderBtn" type="submit" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
