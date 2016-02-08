@@ -29,7 +29,7 @@
 					</tr>
 					<tr>
 						<td><input class="TextMpd" type="text" placeholder="MPD" name="password"></td>
-						<td><input type="hidden" name="type" value="Admin" readonly></td>
+						<td><input type="hidden" name="type" value="Administrateur" readonly></td>
 						<td><button class="SauvegarderBtn" type="submit" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
 					</tr>
 				</form>
@@ -80,16 +80,6 @@
 						<tr>
 							<td><input class="TextMpd" type="text" value="Protection par SMS" readonly></td>
 							<td>
-								<!--<input type="checkbox" id="check">
-								<label for="check" class="loadcheck" id="loadcheck">
-								  <span class="entypo-cancel">&#10008;</span>
-								  <span class="load"></span>
-								  <span class="load"></span>
-								  <span class="load"></span>
-								  <span class="load"></span>
-								  <span class="load"></span>
-								  <span class="entypo-check">&#10004;</span>
-								</label>-->
 
 								<div class="slideThree">	
 									<input type="checkbox" value="None" id="slideThree" name="check" checked />

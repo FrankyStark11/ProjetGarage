@@ -10,7 +10,6 @@
 
 			$users = new modUsers();
 			$retour = $users->ValiderPassword($_POST["password"]);
-			echo $retour;
 
 			//echo json_encode($retour);
 			if ($retour["Type"] == '2') {

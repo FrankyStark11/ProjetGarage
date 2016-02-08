@@ -53,8 +53,6 @@
 
 				//execution de la requete d'ajout
 				$sql->execute();
-
-				echo "l'utilisateur " . $NOM . " est ajouté !";
 			}
 
 		}
