@@ -12,7 +12,7 @@
 	<body onload="initialiser()">
 	<div class="NavBar">
 		<ul>
-		  <li><a href="/index.php/Users/ControleSysteme"> Mot de passe oublié </a></li>
+		  <li><a href="/index.php/Admin/mdpOublie"> Mot de passe oublié </a></li>
 		</ul>
 	</div>
 		<div class="CenterCode">

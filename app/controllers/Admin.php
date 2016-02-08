@@ -22,5 +22,13 @@
 			$admin->ChangeCode($_POST["password"], $_POST["type"]);
 			$this->GestionCodes();
 		}
+		
+		public function mdpOublie(){
+			$admin = new modAdmins();
+			$admin->mdpOublie();
+		}
+		
+		public function resetmdp(){
+		}
 	}
 ?>
