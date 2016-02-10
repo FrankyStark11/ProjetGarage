@@ -1,57 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-﻿body{
-		padding-top: 2em;
-		padding-bottom: 2em;
-		background: url(../images/bg.jpg) no-repeat center top;
-		background-size: cover;
-		background-attachment: fixed;
-		-webkit-backface-visibility: hidden;
-		-webkit-transform: translateZ(0);
-	}
-
-div.Ctn{
-	width: 100%;
-	height: auto;
-
-	min-width: 300px;
-
-  	padding-top: 20px;
-  	padding-bottom: 20px;
-  	margin-top: 2em;
-}
-
-div.InfoPorte{
-	width: 300px;
-=======
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 body{
-    padding-top: 2em;
-    padding-bottom: 2em;
-    background: url(../images/bg.jpg) no-repeat center top;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-  }
-
-div.Ctn{
-  width: 100%;
-  height: auto;
-
-  min-width: 300px;
-
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 2em;
-}
-
-div.InfoPorte{
-  width: 300px;
-<<<<<<< HEAD
-=======
-﻿body{
 		padding-top: 2em;
 		padding-bottom: 2em;
 		background: url(../images/bg.jpg) no-repeat center top;
@@ -74,26 +21,10 @@ div.Ctn{
 
 div.InfoPorte{
 	width: 300px;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
   height: 200px;
 
   display: inline-block;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  padding: 5px;
-  padding-bottom: 10px;
-
-  background-image: url(../images/MetalPattern.png);
-  background-size: auto;
-
-  border-radius: 5px;
-=======
-=======
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 	padding: 5px;
   padding-bottom: 10px;
 
@@ -101,45 +32,12 @@ div.InfoPorte{
 	background-size: auto;
 
 	border-radius: 5px;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 
   margin: 1em;
   margin-bottom: 30px;
 }
 
 div.InfoConfig{
-<<<<<<< HEAD
-  width: 450px;
-  height: auto;
-  
-  display: inline-block;
-
-  padding: 5px;
-    padding-bottom: 15px;
-
-  background-image: url(../images/MetalPattern.png);
-  background-size: auto;
-
-  border-radius: 5px;
-<<<<<<< HEAD
-=======
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
-
-  margin: 1em;
-  margin-bottom: 30px;
-}
-
-<<<<<<< HEAD
-div.NavBar{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-=======
-=======
-div.InfoConfig{
-<<<<<<< HEAD
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 	width: 450px;
 	height: auto;
 	
@@ -161,33 +59,6 @@ div.NavBar{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-<<<<<<< HEAD
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-=======
-  width: 450px;
-  height: auto;
-  
-  display: inline-block;
-
-  padding: 5px;
-    padding-bottom: 15px;
-
-  background-image: url(../images/MetalPattern.png);
-  background-size: auto;
-
-  border-radius: 5px;
-
-  margin: 1em;
-  margin-bottom: 30px;
-}
-
-div.NavBar{
-  position: fixed;
-  top: 0px;
-  left: 0px;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 }
 
 ul {
@@ -221,9 +92,6 @@ li a:hover {
 }
 
 div.CenterCode{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	width: 303px;
 	height: auto;
 
@@ -252,70 +120,6 @@ div.ConfigBox{
 	background-color: #838B8F;
 	font-size: 25px;
 	text-align: center;
-=======
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
-  width: 303px;
-  height: auto;
-
-  position: fixed;
-  left: 50%;
-  margin-left: -151px;
-}
-
-div.ConfigBox{
-  width: 450px;
-  height: auto;
-
-  padding: 20px;
-
-  border-width: 0px;
-  border-radius: 5px;
-  border-style: solid;
-
-  background-image: url(../images/MetalPattern.png);
-  background-size: auto;
-
-  display: inline-block;
-}
-
-.digit{
-  background-color: #838B8F;
-  font-size: 25px;
-  text-align: center;
-<<<<<<< HEAD
-=======
-	width: 303px;
-	height: auto;
-
-	position: fixed;
-	left: 50%;
-	margin-left: -151px;
-}
-
-div.ConfigBox{
-	width: 450px;
-	height: auto;
-
-	padding: 20px;
-
-	border-width: 0px;
-	border-radius: 5px;
-	border-style: solid;
-
-	background-image: url(../images/MetalPattern.png);
-	background-size: auto;
-
-	display: inline-block;
-}
-
-.digit{
-	background-color: #838B8F;
-	font-size: 25px;
-	text-align: center;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
     text-decoration: none;
 
     color: white;
@@ -347,26 +151,9 @@ div.ConfigBox{
 }
 
 .digit-time{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #838B8F;
-  font-size: 25px;
-  text-align: center;
-=======
 	background-color: #838B8F;
 	font-size: 25px;
 	text-align: center;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-	background-color: #838B8F;
-	font-size: 25px;
-	text-align: center;
-=======
-  background-color: #838B8F;
-  font-size: 25px;
-  text-align: center;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
     text-decoration: none;
     color: white;
     border: none;
@@ -392,26 +179,9 @@ div.ConfigBox{
   transform: translateY(2px);
 }
 .confirmer{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #838B8F;
-  font-size: 28px;
-  text-align: center;
-=======
 	background-color: #838B8F;
 	font-size: 28px;
 	text-align: center;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-	background-color: #838B8F;
-	font-size: 28px;
-	text-align: center;
-=======
-  background-color: #838B8F;
-  font-size: 28px;
-  text-align: center;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
     text-decoration: none;
     color: white;
     border: none;
@@ -440,18 +210,7 @@ div.ConfigBox{
 }
 
 button.confirmer:hover{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #3e8e41;
-=======
 	background-color: #3e8e41;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-	background-color: #3e8e41;
-=======
-  background-color: #3e8e41;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 }
 
 .confirmer:hover span {
@@ -465,9 +224,6 @@ button.confirmer:hover{
 
 
 .TextMpd{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 	border-radius: 5px;
 	border-width: 0px;
 
@@ -481,65 +237,14 @@ button.confirmer:hover{
 	text-align: center;
 
 	color: white;
-=======
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
-  border-radius: 5px;
-  border-width: 0px;
-
-  height: 50px;
-  width: 200px;
-  background-color: #838B8F;
-  font-size: 20px;
-
-  outline-style: none;
-
-  text-align: center;
-
-  color: white;
-<<<<<<< HEAD
-=======
-	border-radius: 5px;
-	border-width: 0px;
-
-	height: 50px;
-	width: 200px;
-	background-color: #838B8F;
-	font-size: 20px;
-
-	outline-style: none;
-
-	text-align: center;
-
-	color: white;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 
   -moz-appearance:textfield;
 }
 
 .SauvegarderBtn{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #838B8F;
-  font-size: 28px;
-  text-align: center;
-=======
 	background-color: #838B8F;
 	font-size: 28px;
 	text-align: center;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-	background-color: #838B8F;
-	font-size: 28px;
-	text-align: center;
-=======
-  background-color: #838B8F;
-  font-size: 28px;
-  text-align: center;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
   text-decoration: none;
   color: white;
   border: none;
@@ -568,18 +273,7 @@ button.confirmer:hover{
 }
 
 button.SauvegarderBtn:hover{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background-color: #3e8e41;
-=======
 	background-color: #3e8e41;
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-	background-color: #3e8e41;
-=======
-  background-color: #3e8e41;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 }
 
 .SauvegarderBtn:hover span {
@@ -592,41 +286,10 @@ button.SauvegarderBtn:hover{
 }
 
 h2{
-<<<<<<< HEAD
-<<<<<<< HEAD
-  color: white;
-  font-family: monospace;
-}
-h1{
-  color: white;
-  font-family: monospace;
-=======
-=======
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 	color: white;
 	font-family: monospace;
 }
 h1{
 	color: white;
 	font-family: monospace;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
-<<<<<<< HEAD
->>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
-=======
-=======
-  color: white;
-  font-family: monospace;
-}
-h1{
-  color: white;
-  font-family: monospace;
->>>>>>> cabe8918a07be9ec3889ed67c792970945b00e13
->>>>>>> 10b93b146b69d783b59870b6da20dd47750ad24e
 }
