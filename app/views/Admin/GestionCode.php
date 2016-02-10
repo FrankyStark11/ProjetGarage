@@ -3,8 +3,9 @@
 		<title>Garage</title>
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<script src="js/javascript.js"></script>
+		<script src="/js/javascript.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="/css/style2.css" />
 
@@ -12,119 +13,105 @@
 	<body onload="initialiser()">
 	<div class="NavBar">
 		<ul>
-		  <li><a href="/index.php/Admin/Accueil"> Quitter </a></li>
+		  <li><a class="quit" href="/index.php/Admin/Accueil"> Quitter </a></li>
 		</ul>
 	</div>
 	<div class="Ctn" align="center">
 			<!-- code section -->	
-		<div class="InfoConfig" align="center">
+		<div class="InfoConfig">
 			
 			<h1>Gestion des codes Utilisateurs</h1>
-			<table>
+			<table class="config">
 
 				<form method="post" action="/index.php/Admin/ChangeCode">
 					<tr>
-						<td>
+						<td class="config">
 							<h2>Administration</h2>
 							<input type="hidden" name="type" value="Administrateur" readonly>
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="number" pattern="\d*" placeholder="mot de passe" name="password"></td>
+						<td class="config"><input class="TextMpd" type="number" pattern="\d*" placeholder="mot de passe" name="password"></td>
 					</tr>
 					<tr>
-						<td><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
+						<td class="config"><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
 					</tr>
 				</form>
 
 				<form method="post" action="/index.php/Admin/ChangeCode">
-					<tr align="center">
-						<td><h2>_____________</h2></td>
-					</tr>
-
 					<tr>
-						<td>
+						<td class="config">
 							<h2>Proprio</h2>
 							<input type="hidden" name="type" value="Proprio" readonly>
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="MPD" name="password"></td>
+						<td class="config"><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="mot de passe" name="password"></td>
 					</tr>
 					<tr>
-						<td><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
+						<td class="config"><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
 					</tr>
 				</form>
 
 				<form method="post" action="/index.php/Admin/ChangeCode">
-					<tr align="center">
-						<td><h2>_____________</h2></td>
-					</tr>
-
-					<tr>
-						<td>
+					<tr >
+						<td class="config">
 							<h2>Ami</h2>
 							<input type="hidden" name="type" value="Ami" readonly>
 						</td>
 					</tr>
 					<tr>
-						<td><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="MPD" name="password"></td>
+						<td class="config"><input class="TextMpd" type="number" pattern="\d*" type="text" placeholder="mot de passe" name="password"></td>
 					</tr>
 					<tr>
-						<td><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
+						<td class="config"><button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button></td>
 					</tr>
 				</form>
 			</table>
 		</div>	
-			<div class="InfoConfig" align="center">
+			<div class="InfoConfig">
 				<form method="post" action="">
-				<h1>Gestion de la <br> sécurité</h1>
-					<table>
+				<h1>Gestion de la sécurité</h1>
+					<table class="config">
 						<tr>
-							<td>
-								<h2>Protection SMS</h2>
+							<td class="config">
+								<h2>Sécurité SMS</h2>
 							</td>
 						</tr>
 						<!-- <input type="checkbox" name="active" value="active">Activé -->
 						<tr>
-							<td><input class="TextMpd" type="text" value="Protection par SMS" readonly></td>
-							<td>
+							<td class="config">
 
-								<div class="slideThree">	
-									<input type="checkbox" value="None" id="slideThree" name="check" checked />
-									<label for="slideThree"></label>
+								<div class="Check">
+									<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
 								</div>
 							</td>
 						</tr>
 
-						<tr align="center">
-							<td><h2>__________________</h2></td>
-						</tr>
-
 						<tr>
-							<td>
+							<td class="config">
 								<h2>Configuration SMS</h2>
 							</td>
 						</tr>
 						<tr>
-							<td><input class="TextMpd" type="text" placeholder="# téléphone"></td>
-							<td><button class="SauvegarderBtn" type="button" name="4" value="Sauvegarder" onclick="feedPassword(this)"><span>Sauvegarder </span></button></td>
+							<td class="config"><input class="TextMpd" type="text" placeholder="# téléphone"></td>
 						</tr>
-
-						<tr align="center">
-							<td><h2>__________________</h2></td>
+						<tr>
+							<td class="config"><button class="ChangerBtn" type="button" value="Sauvegarder" ><span>Changer </span></button></td>
 						</tr>
 
 						<tr>
-							<td>
-								<h2>Délais fermeture portes</h2>
+							<td class="config">
+								<h2>Délais</h2>
 							</td>
 						</tr>
 						<tr>
-							<td><input class="TextMpd" type="text" value="00:00" readonly></td>
-							<td>
-								<button class="digit-time" type="button" name="BtnAdd" value="add" onclick="">+</button>
-								<button class="digit-time" type="button" name="BtnSub" value="sub" onclick="">-</button>
+							<td class="config"><input class="TextMpd" id="DelaisText" type="text" placeholder="00:00" value="1:00" readonly></td>
+						</tr>
+						<tr>
+							<td class="config">
+								<button class="ChangerBtnTime" type="button" name="BtnAdd" value="add" onclick="AjouterTempsZoneDelais()">+</button>
+								<button class="ChangerBtnTime" type="button" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
 							</td>
 						</tr>
 					</table>

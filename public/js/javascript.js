@@ -55,3 +55,55 @@ var div_0 = document.createElement('div');
 Main.appendChild( div_0 );
 
 }
+
+function AjouterTempsZoneDelais(){
+
+   var ZoneDelais = document.getElementById("DelaisText");
+   var tempsAcc = ZoneDelais.value;
+   var time = tempsAcc.split(":");
+
+   var MinAcc = parseInt(time[0]);
+   var SecAcc = parseInt(time[1]);
+
+   SecAcc = SecAcc + 10 ;
+
+   if(SecAcc == 60){
+      MinAcc++;
+      SecAcc = "00";
+   }
+
+   ZoneDelais.value = MinAcc + ":" + SecAcc;
+
+}
+
+function RetirerTempsZoneDelais(){
+
+   var ZoneDelais = document.getElementById("DelaisText");
+   var tempsAcc = ZoneDelais.value;
+   var time = tempsAcc.split(":");
+
+   var MinAcc = parseInt(time[0]);
+   var SecAcc = parseInt(time[1]);
+
+
+   SecAcc = SecAcc - 10 ;
+      //retire un minute
+      if(SecAcc < 0){
+         if(MinAcc != 0){
+            MinAcc--;
+            SecAcc = "50";
+         }
+         else
+         {
+            SecAcc = SecAcc+10;
+         }
+      }
+
+      if(SecAcc == 0)
+      {
+         //ajuste le visuel du temps
+         SecAcc="00";
+      }
+
+      ZoneDelais.value = MinAcc + ":" + SecAcc;
+}
