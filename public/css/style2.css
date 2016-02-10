@@ -1,0 +1,295 @@
+body{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background: url(../images/bg.jpg) no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+  }
+
+div.Ctn{
+  width: 100%;
+  height: auto;
+
+  min-width: 300px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 2em;
+}
+
+div.InfoPorte{
+  width: 300px;
+  height: 200px;
+
+  display: inline-block;
+
+  padding: 5px;
+  padding-bottom: 10px;
+
+  background-image: url(../images/MetalPattern.png);
+  background-size: auto;
+
+  border-radius: 5px;
+
+  margin: 1em;
+  margin-bottom: 30px;
+}
+
+div.InfoConfig{
+  width: 450px;
+  height: auto;
+  
+  display: inline-block;
+
+  padding: 5px;
+    padding-bottom: 15px;
+
+  background-image: url(../images/MetalPattern.png);
+  background-size: auto;
+
+  border-radius: 5px;
+
+  margin: 1em;
+  margin-bottom: 30px;
+}
+
+div.NavBar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: white;
+
+    width: 100%;
+    height: auto;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: monospace;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: black;
+    color: white;
+}
+
+div.CenterCode{
+  width: 303px;
+  height: auto;
+
+  position: fixed;
+  left: 50%;
+  margin-left: -151px;
+}
+
+div.ConfigBox{
+  width: 450px;
+  height: auto;
+
+  padding: 20px;
+
+  border-width: 0px;
+  border-radius: 5px;
+  border-style: solid;
+
+  background-image: url(../images/MetalPattern.png);
+  background-size: auto;
+
+  display: inline-block;
+}
+
+.digit{
+  background-color: #838B8F;
+  font-size: 25px;
+  text-align: center;
+    text-decoration: none;
+
+    color: white;
+    border-width: 0px;
+    border-style: solid;
+    
+
+    width: 100px;
+    height: 100px;
+    margin: -1px;
+    float: left;
+    transition: all 0.3s;
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+
+    outline-style: none;
+}
+.digit:hover {
+    background-color: #62686B;
+}
+
+.digit:active {
+  background-color: #44484A;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+.digit-time{
+  background-color: #838B8F;
+  font-size: 25px;
+  text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 80px;
+    height: 50px;
+    margin: 2px;
+    float: left;
+    transition: all 0.3s;
+    transition-duration: 0.1s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+.digit-time:hover {
+    background-color: #62686B;
+}
+
+.digit-time:active {
+  background-color: #44484A;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+.confirmer{
+  background-color: #838B8F;
+  font-size: 28px;
+  text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 303px;
+    height: 100px;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+    outline-style: none;
+}
+.confirmer span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.confirmer span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.confirmer:hover{
+  background-color: #3e8e41;
+}
+
+.confirmer:hover span {
+  padding-right: 25px;
+}
+
+.confirmer:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.TextMpd{
+  border-radius: 5px;
+  border-width: 0px;
+
+  height: 50px;
+  width: 200px;
+  background-color: #838B8F;
+  font-size: 20px;
+
+  outline-style: none;
+
+  text-align: center;
+
+  color: white;
+
+  -moz-appearance:textfield;
+}
+
+.SauvegarderBtn{
+  background-color: #838B8F;
+  font-size: 28px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  outline-style: none;
+}
+.SauvegarderBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.SauvegarderBtn span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button.SauvegarderBtn:hover{
+  background-color: #3e8e41;
+}
+
+.SauvegarderBtn:hover span {
+  padding-right: 25px;
+}
+
+.SauvegarderBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+h2{
+  color: white;
+  font-family: monospace;
+}
+h1{
+  color: white;
+  font-family: monospace;
+}
