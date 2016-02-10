@@ -4,11 +4,11 @@
 	class Admin extends Controller
 	{
 		public function Accueil(){
-			parent::view('Users/PageCode');
+			parent::view('Users/Index');
 		}
 
 		public function GestionCodes(){
-			parent::view('Users/Code');
+			parent::view('Admin/GestionCode');
 		}
 
 		public function GetAllPin(){

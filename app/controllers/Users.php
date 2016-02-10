@@ -16,7 +16,7 @@
 				parent::view('Users/Controle');
 			}
 			elseif($retour["Type"] == '1'){
-				parent::view('Users/Code');
+				parent::view('Admin/GestionCode');
 			}
 			else
 			{
