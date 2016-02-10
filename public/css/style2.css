@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     padding-top: 2em;
     padding-bottom: 2em;
@@ -21,10 +22,36 @@ div.Ctn{
 
 div.InfoPorte{
   width: 300px;
+=======
+﻿body{
+		padding-top: 2em;
+		padding-bottom: 2em;
+		background: url(../images/bg.jpg) no-repeat center top;
+		background-size: cover;
+		background-attachment: fixed;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+	}
+
+div.Ctn{
+	width: 100%;
+	height: auto;
+
+	min-width: 300px;
+
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+  	margin-top: 2em;
+}
+
+div.InfoPorte{
+	width: 300px;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
   height: 200px;
 
   display: inline-block;
 
+<<<<<<< HEAD
   padding: 5px;
   padding-bottom: 10px;
 
@@ -32,12 +59,22 @@ div.InfoPorte{
   background-size: auto;
 
   border-radius: 5px;
+=======
+	padding: 5px;
+  padding-bottom: 10px;
+
+	background-image: url(../images/MetalPattern.png);
+	background-size: auto;
+
+	border-radius: 5px;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 
   margin: 1em;
   margin-bottom: 30px;
 }
 
 div.InfoConfig{
+<<<<<<< HEAD
   width: 450px;
   height: auto;
   
@@ -59,6 +96,29 @@ div.NavBar{
   position: fixed;
   top: 0px;
   left: 0px;
+=======
+	width: 450px;
+	height: auto;
+	
+  display: inline-block;
+
+	padding: 5px;
+    padding-bottom: 15px;
+
+	background-image: url(../images/MetalPattern.png);
+	background-size: auto;
+
+	border-radius: 5px;
+
+  margin: 1em;
+	margin-bottom: 30px;
+}
+
+div.NavBar{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 }
 
 ul {
@@ -92,6 +152,7 @@ li a:hover {
 }
 
 div.CenterCode{
+<<<<<<< HEAD
   width: 303px;
   height: auto;
 
@@ -120,6 +181,36 @@ div.ConfigBox{
   background-color: #838B8F;
   font-size: 25px;
   text-align: center;
+=======
+	width: 303px;
+	height: auto;
+
+	position: fixed;
+	left: 50%;
+	margin-left: -151px;
+}
+
+div.ConfigBox{
+	width: 450px;
+	height: auto;
+
+	padding: 20px;
+
+	border-width: 0px;
+	border-radius: 5px;
+	border-style: solid;
+
+	background-image: url(../images/MetalPattern.png);
+	background-size: auto;
+
+	display: inline-block;
+}
+
+.digit{
+	background-color: #838B8F;
+	font-size: 25px;
+	text-align: center;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
     text-decoration: none;
 
     color: white;
@@ -151,9 +242,15 @@ div.ConfigBox{
 }
 
 .digit-time{
+<<<<<<< HEAD
   background-color: #838B8F;
   font-size: 25px;
   text-align: center;
+=======
+	background-color: #838B8F;
+	font-size: 25px;
+	text-align: center;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
     text-decoration: none;
     color: white;
     border: none;
@@ -179,9 +276,15 @@ div.ConfigBox{
   transform: translateY(2px);
 }
 .confirmer{
+<<<<<<< HEAD
   background-color: #838B8F;
   font-size: 28px;
   text-align: center;
+=======
+	background-color: #838B8F;
+	font-size: 28px;
+	text-align: center;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
     text-decoration: none;
     color: white;
     border: none;
@@ -210,7 +313,11 @@ div.ConfigBox{
 }
 
 button.confirmer:hover{
+<<<<<<< HEAD
   background-color: #3e8e41;
+=======
+	background-color: #3e8e41;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 }
 
 .confirmer:hover span {
@@ -224,6 +331,7 @@ button.confirmer:hover{
 
 
 .TextMpd{
+<<<<<<< HEAD
   border-radius: 5px;
   border-width: 0px;
 
@@ -237,14 +345,35 @@ button.confirmer:hover{
   text-align: center;
 
   color: white;
+=======
+	border-radius: 5px;
+	border-width: 0px;
+
+	height: 50px;
+	width: 200px;
+	background-color: #838B8F;
+	font-size: 20px;
+
+	outline-style: none;
+
+	text-align: center;
+
+	color: white;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 
   -moz-appearance:textfield;
 }
 
 .SauvegarderBtn{
+<<<<<<< HEAD
   background-color: #838B8F;
   font-size: 28px;
   text-align: center;
+=======
+	background-color: #838B8F;
+	font-size: 28px;
+	text-align: center;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
   text-decoration: none;
   color: white;
   border: none;
@@ -273,7 +402,11 @@ button.confirmer:hover{
 }
 
 button.SauvegarderBtn:hover{
+<<<<<<< HEAD
   background-color: #3e8e41;
+=======
+	background-color: #3e8e41;
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 }
 
 .SauvegarderBtn:hover span {
@@ -286,10 +419,27 @@ button.SauvegarderBtn:hover{
 }
 
 h2{
+<<<<<<< HEAD
   color: white;
   font-family: monospace;
 }
 h1{
   color: white;
   font-family: monospace;
+=======
+	color: white;
+	font-family: monospace;
+}
+h1{
+	color: white;
+	font-family: monospace;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+>>>>>>> 5328d143a6d33f84b72a24d6e528ae58c6f6673a
 }
