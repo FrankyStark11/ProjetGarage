@@ -44,7 +44,7 @@
 						<td><input type="hidden" name="password" id="idpassword" readonly></td>
 					</tr>
 					<tr>
-						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confimer </span></button></td>
+						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confirmer </span></button></td>
 					</tr>
 				</table>
 			</form>

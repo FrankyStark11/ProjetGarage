@@ -222,25 +222,6 @@ button.confirmer:hover{
   right: 0;
 }
 
-
-.TextMpd{
-	border-radius: 5px;
-	border-width: 0px;
-
-	height: 50px;
-	width: 200px;
-	background-color: #838B8F;
-	font-size: 20px;
-
-	outline-style: none;
-
-	text-align: center;
-
-	color: white;
-
-  -moz-appearance:textfield;
-}
-
 .SauvegarderBtn{
 	background-color: #838B8F;
 	font-size: 28px;
@@ -292,4 +273,60 @@ h2{
 h1{
 	color: white;
 	font-family: monospace;
+}
+
+.TextMpd {
+    background: #1F2124;
+    background: -moz-linear-gradient(#1F2124, #27292C);
+    background: -ms-linear-gradient(#1F2124, #27292C);
+    background: -o-linear-gradient(#1F2124, #27292C);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#1F2124), to(#27292C));
+    background: -webkit-linear-gradient(#1F2124, #27292C);
+    background: linear-gradient(#1F2124, #27292C);
+    border: 1px solid #000;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #FFF;
+    width: 150px;
+    height: 25px;
+
+    text-align: center;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.TextMpd:focus {
+    box-shadow: inset 0 0 2px #000;
+    background: #494D54;
+    border-color: #51CBEE;
+    outline: none;
+}
+
+.ChangerBtn {
+    background: #1F2124;
+    background: -moz-linear-gradient(#1F2124, #27292C);
+    background: -ms-linear-gradient(#1F2124, #27292C);
+    background: -o-linear-gradient(#1F2124, #27292C);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#1F2124), to(#27292C));
+    background: -webkit-linear-gradient(#1F2124, #27292C);
+    background: linear-gradient(#1F2124, #27292C);
+    border: 1px solid #000;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #FFF;
+    width: 150px;
+    height: 35px;
+
+    cursor: pointer;
+}
+
+.ChangerBtn:focus {
+    box-shadow: inset 0 0 2px #000;
+    background: #494D54;
+    border-color: #51CBEE;
+    outline: none;
 }

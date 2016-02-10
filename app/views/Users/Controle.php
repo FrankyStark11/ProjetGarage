@@ -188,7 +188,7 @@
 				
 			</div>
 			<div class="InfoPorte" align="center">
-				<h1>Porte latéral </h1>
+				<h1>Porte latérale </h1>
 					<h2> Etat : 
 						<?php
 								$porte = system ( "gpio read 0");
