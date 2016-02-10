@@ -1,6 +1,5 @@
 //permet d'initialiser les composantes
 function initialiser(){
-	document.getElementById("idpassword").style.display = "none";
 	document.getElementById("idpassword").value = "";
 }
 
@@ -8,6 +7,13 @@ function initialiser(){
 function feedPassword(e){
 	ob = document.getElementById("idpassword");
 	ob.value += e.value;
+}
+
+function EffacePassword(){
+   ob = document.getElementById("idpassword");
+   str = ob.value;
+   str = str.substring(0, str.length - 1);
+   ob.value = str;
 }
 
 function AjouterDivInfoPorte(NoPin,Nom){

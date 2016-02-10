@@ -36,12 +36,12 @@
 					<tr align="center">
 						<td><input class="digit" disabled type="button" name="0" value="" ></td>
 						<td><input class="digit" type="button" name="0" value="0" onclick="feedPassword(this)"></td>
-						<td><input class="digit" type="button" name="9" value="<=" onclick="feedPassword(this)"></td>
+						<td><input class="digit" type="button" name="9" value="<=" onclick="EffacePassword()"></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td><input type="text" name="password" id="idpassword" readonly></td>
+						<td><input type="hidden" name="password" id="idpassword" readonly></td>
 					</tr>
 					<tr>
 						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confimer </span></button></td>
