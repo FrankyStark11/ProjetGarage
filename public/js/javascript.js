@@ -43,7 +43,7 @@ var div_0 = document.createElement('div');
 
    var button_0 = document.createElement('button');
       button_0.type = "button";
-      button_0.className = "SauvegarderBtn";
+      button_0.className = "ChangerBtn";
       button_0.value = "Action";
 
       var span_0 = document.createElement('span');

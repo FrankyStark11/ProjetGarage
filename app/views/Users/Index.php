@@ -16,6 +16,11 @@
 			<form method="post" action="/index.php/Users/Password">
 				<table>
 					<tr>
+						<td><input type="password" class="MDP" name="password" id="idpassword" readonly></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
 						<td><button class="digit" type="button" name="1" value="1" onclick="feedPassword(this)"><span>1</span></button></td>
 						<td><button class="digit" type="button" name="2" value="2" onclick="feedPassword(this)"><span>2</span></button></td>
 						<td><button class="digit" type="button" name="3" value="3" onclick="feedPassword(this)"><span>3</span></button></td>
@@ -37,9 +42,6 @@
 					</tr>
 				</table>
 				<table>
-					<tr>
-						<td><input type="hidden" name="password" id="idpassword" readonly></td>
-					</tr>
 					<tr>
 						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confirmer </span></button></td>
 					</tr>

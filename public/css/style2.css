@@ -162,28 +162,31 @@ div.ConfigBox{
 
 .digit{
 	background-color: #838B8F;
+
 	font-size: 25px;
+  font-family: 'Ubuntu', 'Lato', sans-serif;
+
 	text-align: center;
   text-decoration: none;
 
-    color: white;
-    border-width: 0px;
-    border-style: solid;
-    border-radius: 5px;
+  color: white;
+
+  border-width: 0px;
+  border-style: solid;
+  border-radius: 5px;
     
 
-    width: 100px;
-    height: 100px;
-    margin: -1px;
-    float: left;
-    transition: all 0.3s;
-    transition-duration: 0.1s;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    overflow: hidden;
-    text-decoration: none;
-    cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: -1px;
+  float: left;
+  transition: all 0.3s;
+  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  overflow: hidden;
+  cursor: pointer;
 
-    outline-style: none;
+  outline-style: none;
 }
 .digit:hover {
     background-color: #62686B;
@@ -223,20 +226,28 @@ div.ConfigBox{
   box-shadow: 0 5px #666;
   transform: translateY(2px);
 }
+
 .confirmer{
 	background-color: #838B8F;
 	font-size: 28px;
+  font-family: 'Ubuntu', 'Lato', sans-serif;
+
 	text-align: center;
-    text-decoration: none;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    width: 303px;
-    height: 100px;
-    display: inline-block;
-    transition: all 0.5s;
-    cursor: pointer;
-    outline-style: none;
+  text-decoration: none;
+
+  color: white;
+
+  border: none;
+  border-radius: 5px;
+
+  width: 303px;
+  height: 100px;
+  display: inline-block;
+
+  transition: all 0.5s;
+  cursor: pointer;
+  outline-style: none;
+
 }
 .confirmer span {
   cursor: pointer;
@@ -265,6 +276,21 @@ button.confirmer:hover{
 .confirmer:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+input.MDP{
+  height: 50px;
+  width: 303px;
+
+  color: white;
+
+  background-color: black;
+
+  font-size: 30px;
+
+  border-width: 0px;
+
+  text-align: center;
 }
 
 .SauvegarderBtn{
@@ -313,14 +339,13 @@ button.SauvegarderBtn:hover{
 
 h2{
 	color: white;
-	font-family: monospace;
+	font-family: 'Ubuntu', 'Lato', sans-serif;
 
-  text-decoration: underline;
   padding-top: 10px;
 }
 h1{
 	color: white;
-	font-family: monospace;
+	font-family: 'Ubuntu', 'Lato', sans-serif;
 }
 
 .TextMpd {

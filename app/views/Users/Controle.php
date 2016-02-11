@@ -67,12 +67,12 @@
 								if ($porte == "0") {
 									?> 
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Ouvrir</span></button>
 
 									<?php  } else {
 									?>  
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Fermer</span></button>
 
 									<?php
 								}
@@ -104,12 +104,12 @@
 								if ($porte == "0") {
 									?> 
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Ouvrir</span></button>
 
 									<?php  } else {
 									?>  
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Fermer</span></button>
 
 									<?php
 								}
@@ -140,12 +140,12 @@
 								if ($porte == "0") {
 									?> 
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Ouvrir</span></button>
 
 									<?php  } else {
 									?>  
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Fermer</span></button>
 
 									<?php
 								}
@@ -176,12 +176,12 @@
 								if ($porte == "0") {
 									?> 
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Ouvrir</span></button>
 
 									<?php  } else {
 									?>  
 
-									<button type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+									<button type="button" value="Action" class="ChangerBtn"><span>Fermer</span></button>
 
 									<?php
 								}
@@ -212,12 +212,12 @@
 								if ($porte == "0") {
 									?> 
 
-									<button disabled type="button" value="Action" class="SauvegarderBtn"><span>Ouvrir</span></button>
+									<button disabled type="button" value="Action" class="ChangerBtn"><span>Ouvrir</span></button>
 
 									<?php  } else {
 									?>  
 
-									<button disabled type="button" value="Action" class="SauvegarderBtn"><span>Fermer</span></button>
+									<button disabled type="button" value="Action" class="ChangerBtn"><span>Fermer</span></button>
 
 									<?php
 								}
@@ -227,7 +227,7 @@
 				<h1>Ajouter </h1>
 				<h2> nouvelle entrée 
 					</h2>
-				<button type="button" value="Action" onclick="AjouterDivInfoPorte(21,'MP1')" class="SauvegarderBtn"><span> + </span></button>			
+				<button type="button" value="Action" onclick="AjouterDivInfoPorte(21,'MP1')" class="ChangerBtn"><span> + </span></button>			
 			</div>
 	</div>	
 
