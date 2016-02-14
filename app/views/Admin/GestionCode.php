@@ -73,47 +73,57 @@
 				<form method="post" action="">
 				<h1>Gestion de la sécurité</h1>
 					<table class="config">
-						<tr>
-							<td class="config">
-								<h2>Sécurité SMS</h2>
-							</td>
-						</tr>
-						<!-- <input type="checkbox" name="active" value="active">Activé -->
-						<tr>
-							<td class="config">
+						
+						<form method="post" action="/index.php/Admin/ChangeCheckSMS">
+							<tr>
+								<td class="config">
+									<h2>Sécurité SMS</h2>
+								</td>
+							</tr>
+							<!-- <input type="checkbox" name="active" value="active">Activé -->
+							<tr>
+								<td class="config">
 
-								<div class="Check">
-									<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
-								</div>
-							</td>
-						</tr>
+									<div class="Check">
+										<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
+									</div>
+								</td>
+							</tr>
+						</form>
 
-						<tr>
-							<td class="config">
-								<h2>Configuration SMS</h2>
-							</td>
-						</tr>
-						<tr>
-							<td class="config"><input class="TextMpd" type="text" placeholder="# téléphone"></td>
-						</tr>
-						<tr>
-							<td class="config"><button class="ChangerBtn" type="button" value="Sauvegarder" ><span>Changer </span></button></td>
-						</tr>
 
-						<tr>
-							<td class="config">
-								<h2>Délais</h2>
-							</td>
-						</tr>
-						<tr>
-							<td class="config"><input class="TextMpd" id="DelaisText" type="text" placeholder="00:00" value="1:00" readonly></td>
-						</tr>
-						<tr>
-							<td class="config">
-								<button class="ChangerBtnTime" type="button" name="BtnAdd" value="add" onclick="AjouterTempsZoneDelais()">+</button>
-								<button class="ChangerBtnTime" type="button" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
-							</td>
-						</tr>
+						<form method="post" action="/index.php/Admin/ChangePhone">
+							<tr>
+								<td class="config">
+									<h2>Configuration SMS</h2>
+								</td>
+							</tr>
+							<tr>
+								<td class="config"><input class="TextMpd" type="text" placeholder="# téléphone" name="telephone"></td>
+							</tr>
+							<tr>
+								<td class="config"><button class="ChangerBtn" type="submit" value="Sauvegarder" ><span>Changer </span></button></td>
+							</tr>
+						</form>
+
+
+						<form method="post" action="/index.php/Admin/ChangeTimer">
+							<tr>
+								<td class="config">
+									<h2>Délais</h2>
+								</td>
+							</tr>
+							<tr>
+								<td class="config"><input class="TextMpd" id="DelaisText" type="text" placeholder="00:00" value="1:00" readonly name="timer"></td>
+							</tr>
+							<tr>
+								<td class="config">
+									<button class="ChangerBtnTime" type="submit" name="BtnAdd" value="add" onclick="AjouterTempsZoneDelais()">+</button>
+									<button class="ChangerBtnTime" type="submit" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
+								</td>
+							</tr>
+						</form>
+
 					</table>
 				</form>
 			</div>

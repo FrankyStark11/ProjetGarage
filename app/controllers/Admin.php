@@ -38,6 +38,32 @@
 			$admin->ResetAdmin($_POST["password"]);
 			parent::view('Users/Index');
 		}
+
+
+		/*==============================================
+			Gestion de securité
+		================================================*/
+
+		public function ChangeCheckSMS(){
+			$admin = new modAdmins();
+
+			echo $_POST["check"];
+
+			//$admin->ChangeCheckSMS($_POST["check"]);
+			//$this->GestionCodes();
+		}
+
+		public function ChangePhone(){
+			$admin = new modAdmins();
+			$admin->ChangePhone($_POST["telephone"]);
+			$this->GestionCodes();
+		}
+
+		public function ChangeTimer(){
+			$admin = new modAdmins();
+			$admin->ChangeTimer($_POST["timer"]);
+			$this->GestionCodes();
+		}
 		
 		
 	}

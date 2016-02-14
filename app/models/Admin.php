@@ -93,5 +93,39 @@
 			mail($to, $subject, $message, $headers);
 			
 		}
+
+
+		//Permet de changer si oui ou non en envoie des alertes SMS
+		function ChangeCheckSMS($value){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("UPDATE Securite SET SecureOnOff = :OnOff");
+			$sql->bindValue(":OnOff", $value);
+
+			$sql->execute();
+			$db = null;
+		}
+
+		//Permet de changer le numero de téléphone
+		function ChangePhone($value){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("UPDATE Securite SET Telephone = :phone");
+			$sql->bindValue(":phone", $value);
+
+			$sql->execute();
+			$db = null;
+		}
+
+		//Permet de changer le delais avant la fermeture automatique des portes
+		function ChangeTimer($value){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("UPDATE Securite SET Delais = :timer");
+			$sql->bindValue(":timer", $value);
+
+			$sql->execute();
+			$db = null;
+		}
 	}
 ?>
