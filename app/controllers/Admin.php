@@ -45,7 +45,29 @@
 			$admin->ResetAdmin($_POST["password"]);
 			parent::view('Users/Index');
 		}
+		
+		public function EditDistributeurs(){
+			$admin = new modAdmins();
+			$nombre =  $admin->GetDistributeursCount();
+			$distributeurs = $admin->GetDistributeurs();
 
+			parent::view('Admin/EditDistribiteurs', ['nombre' => $nombre, 'distributeurs' => $distributeurs]);
+		}
+		
+		
+		
+		public function GetDistributeurs(){
+			$admin = new modAdmins();
+			$admin->GetDistributeurs();
+		}
+		
+
+		
+		public function SetDistributeurs(){
+			$admin = new modAdmins();
+			$admin->SetDistributeurs();
+			parent::view('Admin/GestionCode');
+		}
 
 		/*==============================================
 			Gestion de securité

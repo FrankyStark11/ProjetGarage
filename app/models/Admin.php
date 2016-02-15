@@ -146,5 +146,33 @@
 			$sql->execute();
 			$db = null;
 		}
+		
+		
+		function GetDistributeursCount(){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("SELECT COUNT(ID) AS COUNT FROM Distributeur");
+			
+			$sql->execute();
+			$nombre =  $sql->fetch(PDO::FETCH_ASSOC);
+			
+			$db = null;
+			
+			return $nombre["COUNT"];
+		}
+		
+		function GetDistributeurs(){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("SELECT Nom, Extention FROM Distributeur");
+			
+			$sql->execute();
+			$distributeurs =  $sql->fetchAll(PDO::FETCH_ASSOC);
+			
+			$db = null;
+			
+			return $distributeurs;
+		}
+		
 	}
 ?>
