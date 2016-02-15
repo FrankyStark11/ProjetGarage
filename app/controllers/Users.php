@@ -13,6 +13,11 @@
 
 			//echo json_encode($retour);
 			if ($retour["Type"] == '2') {
+
+				$User = new modUsers();
+				$result = $User->GetAllModePin();
+				$_SESSION["PINMODE"] = $result;
+
 				parent::view('Users/Controle');
 			}
 			elseif($retour["Type"] == '1'){

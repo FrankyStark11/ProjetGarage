@@ -10,34 +10,39 @@
 	<link rel="stylesheet" type="text/css" href="/css/style2.css" />
 	<script src="/js/javascript.js"></script>
 
-	<script type="text/javascript">
-		var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	<?php
 
-            	//var myNode = document.getElementById("DivInfo");
-				//while (myNode.firstChild) {
-    			//myNode.removeChild(myNode.firstChild);
-}
-                for (x in xmlhttp.responseText ){
-                	var Nom = x['Nom'] ;
-                	var Pin = x['No_pin'] ;
+		// * * * Initialisation des GPIO * * *
+		$data = $_SESSION['PINMODE'];
 
-                	AjouterDivInfoPorte(Pin,Nom);
-                }
-            }
-        };
-        xmlhttp.open("get", "/index.php/Admin/GetAllPin", true);
-        xmlhttp.send();
-	</script>
+		system ("gpio mode 1 out");  // Pin : système armé
+		system ("gpio mode 0 in"); // Pin : petite porte commutateur magnétique
 
+		$temp = 0;
+		$Mode = "";
+
+		for ($i = 0; $i < count($data); $i++) {
+
+    		$Mode = $data[$i]["Mode"];
+    		$temp = intval($data[$i]["No_pin"]);
+
+    		system ("gpio mode ". $temp ." ". $Mode );
+
+    		if($Mode == "out"){
+    			system ("gpio write ".$temp." on");
+    		}
+		}
+
+		
+
+	?>
 </head>
 
-<body>
+<body onload="InitialiserPageControle()">
 	<div class="NavBar">
 		<ul>
 		<li><a class="quit" href="/index.php/Admin/Accueil"> Quitter</a></li>
-		<li><a href="/index.php/Users/ControleSysteme"> Rafraichir </a></li>
+		<li><a href="#" onClick="AfficherEtatPorte();"> Rafraichir </a></li>
 		</ul>
 	</div>
 	<div class="Ctn" align="center" id="DivInfo">
@@ -223,6 +228,7 @@
 								}
 						?>			
 			</div>
+
 			<div class="InfoPorte" align="center">
 				<h1>Ajouter </h1>
 				<h2> nouvelle entrée 

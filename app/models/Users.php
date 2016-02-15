@@ -29,6 +29,25 @@
 			return $result;
 		}
 
+		function GetAllModePin(){
+
+			$db = $this->connectDB();
+
+			if (is_null($db)) {
+				echo "erreur de la BD";
+			}
+			else
+			{
+				$sql = $db->prepare("SELECT No_pin,Mode FROM GPIO"); 
+				$sql->execute(); 
+
+				$result =  $sql->fetchAll(PDO::FETCH_ASSOC);
+
+				$db = null; //vide la connection
+			}
+			return $result;
+		}
+
 		function AjouterUtilisateur(){
 
 			$dir = 'sqlite:../app/bd/garage.sqlite';

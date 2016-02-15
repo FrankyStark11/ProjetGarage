@@ -37,7 +37,7 @@ var div_0 = document.createElement('div');
 
 
    var h2_0 = document.createElement('h2');
-      h2_0.appendChild( document.createTextNode(" Etat : Fermer ") );
+      h2_0.appendChild( document.createTextNode(" Etat : Fermée ") );
    div_0.appendChild( h2_0 );
 
 
@@ -55,6 +55,55 @@ var div_0 = document.createElement('div');
 Main.appendChild( div_0 );
 
 }
+
+function InitialiserPageControle(){
+   AfficherEtatPorte();
+   InitialiserPIN();
+}
+
+function InitialiserPIN(){
+      var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+               var myNode = document.getElementById("DivInfo");
+            while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+
+            var data = JSON.parse(xmlhttp.responseText);
+         }     
+            //initialise des PIN ici
+
+            
+            }
+        };
+        xmlhttp.open("get", "/index.php/Admin/GetAllModePin", true);
+        xmlhttp.send();
+      }
+
+function AfficherEtatPorte(){
+      var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+               var myNode = document.getElementById("DivInfo");
+            while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+
+            var data = JSON.parse(xmlhttp.responseText);
+         }     
+            //pour toutes les portes detecté afficher les info et le controle
+            for (i = 0; i < data.length; i++) {
+               var Nom = data[i]['Nom'] ;
+                  var Pin = data[i]['No_pin'] ;
+
+                  AjouterDivInfoPorte(Pin,Nom);
+            }
+            }
+        };
+        xmlhttp.open("get", "/index.php/Admin/GetAllPin", true);
+        xmlhttp.send();
+      }
 
 function AjouterTempsZoneDelais(){
 
