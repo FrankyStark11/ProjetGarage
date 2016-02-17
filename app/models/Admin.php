@@ -145,11 +145,12 @@
 		}
 
 		//Permet de changer le numero de téléphone
-		function ChangePhone($value){
+		function ChangePhone($phone, $dist){
 			$db = $this->connectDB();
 
-			$sql = $db->prepare("UPDATE Securite SET Telephone = :phone");
-			$sql->bindValue(":phone", $value);
+			$sql = $db->prepare("UPDATE Securite SET Telephone = :phone, Distributeur = :dist");
+			$sql->bindValue(":phone", $phone);
+			$sql->bindValue(":dist", $dist);
 
 			$sql->execute();
 			$db = null;
@@ -217,9 +218,6 @@
 
 			$sql = $db->prepare("DELETE FROM Distributeur");
 			$sql->execute();
-			
-			print_r($nom);
-			print_r($ext);
 			
 			for($i = 0; $i < count($nom); $i++){
 				$sql = $db->prepare("INSERT INTO Distributeur ('Nom','Extention') VALUES (:nom, :extention)");
