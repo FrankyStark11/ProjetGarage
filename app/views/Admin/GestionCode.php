@@ -23,7 +23,7 @@
 			<!-- code section -->	
 		<div class="InfoConfig">
 			
-			<h1>Gestion des codes Utilisateurs</h1>
+			<h1>Gestion Utilisateurs</h1>
 			<table class="config">
 
 				<form method="post" action="/index.php/Admin/ChangeCode">
@@ -185,6 +185,64 @@
 					<tr>
 						<td>
 							<button class="ChangerBtn" type="submit" value="Ajouter"><span>Ajouter</span></button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		<div class="InfoConfig">
+			<form method="post" action="">
+				<h1>Modification de GPIO</h1>
+				<table >
+					<tr>
+						<td>
+							Choix de la PIN :
+						</td>
+						<td>
+							<select name="Mode" class="TextMpd">
+								<option selected value="in"> IN </option>
+								<option value="out"> OUT </option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3>Entrez les nouveaux details</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Numéro PIN :
+						</td>
+						<td>
+							<input name="NoPin" type="number" pattern="\d*" class="TextMpd" placeholder="# PIN"></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Nom de l'entré :
+						</td>
+						<td>
+							<input name="Nom" type="text" class="TextMpd" placeholder="Nom"></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Mode I/O :
+						</td>
+						<td>
+							<select name="Mode" class="TextMpd">
+								<option selected value="in"> IN </option>
+								<option value="out"> OUT </option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<button class="ChangerBtn" type="submit" value="Ajouter"><span>Confirmer</span></button>
 						</td>
 					</tr>
 				</table>

@@ -20,7 +20,7 @@ div.Ctn{
 }
 
 @media only screen and (orientation: portrait){
-  div.InfoPorte{
+  div.InfoPorteOuverte{
     width: 300px;
     height: 200px;
 
@@ -33,6 +33,30 @@ div.Ctn{
     background-size: auto;
 
     border-radius: 5px;
+    border-width: 3px;
+  	border-style: solid;
+  	border-color: red;
+
+    margin: 1em;
+    margin-bottom: 30px;
+  }
+
+div.InfoPorteFermer{
+    width: 300px;
+    height: 200px;
+
+    display: inline-block;
+
+    padding: 5px;
+    padding-bottom: 10px;
+
+    background-image: url(../images/MetalPattern.png);
+    background-size: auto;
+
+    border-radius: 5px;
+    border-width: 3px;
+  	border-style: solid;
+  	border-color: green;
 
     margin: 1em;
     margin-bottom: 30px;
@@ -48,7 +72,7 @@ div.Ctn{
 }
 
 @media only screen and (orientation: landscape){
-  div.InfoPorte{
+  div.InfoPorteOuverte{
   	width: 250px;
     height: 200px;
 
@@ -61,6 +85,32 @@ div.Ctn{
   	background-size: auto;
 
   	border-radius: 5px;
+
+  	border-width: 3px;
+  	border-style: solid;
+  	border-color: red;
+
+    margin: 1em;
+    margin-bottom: 30px;
+  }
+
+  div.InfoPorteFermer{
+  	width: 250px;
+    height: 200px;
+
+    display: inline-block;
+
+  	padding: 5px;
+    padding-bottom: 10px;
+
+  	background-image: url(../images/MetalPattern.png);
+  	background-size: auto;
+
+  	border-radius: 5px;
+
+  	border-width: 3px;
+  	border-style: solid;
+  	border-color: green;
 
     margin: 1em;
     margin-bottom: 30px;
@@ -76,8 +126,8 @@ div.Ctn{
 }
 
 div.InfoConfig{
-	width: 400px;
-  min-width: 300px;
+	width: 30%;
+ 		min-width: 300px;
 	height: auto;
 	
   display: inline-block;
@@ -178,7 +228,7 @@ div.ConfigBox{
     
 
   width: 100px;
-  height: 100px;
+  height: 80px;
   margin: -1px;
   float: left;
   transition: all 0.3s;
@@ -242,7 +292,7 @@ div.ConfigBox{
   border-radius: 5px;
 
   width: 303px;
-  height: 100px;
+  height: 90px;
   display: inline-block;
 
   transition: all 0.5s;
