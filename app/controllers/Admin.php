@@ -22,7 +22,6 @@ session_start();
 			$admin = new modAdmins();
 			$result = $admin->GetAllModePin();
 			$SESSION["PINMODE"] = json_encode($result);
-			//return json_encode($result);
 		}
 		
 		public function ChangeCode(){

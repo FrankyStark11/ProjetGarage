@@ -6,6 +6,24 @@
 	
 	class modAdmins extends connectDB
 	{
+		function GetNomDistributeurs(){
+			$db = $this->connectDB();
+
+			if (is_null($db)) {
+				echo "erreur de la BD";
+			}
+			else
+			{
+				$sql = $db->prepare("SELECT Nom FROM Distributeur");
+				$sql->execute();
+
+				$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+				$db = null;
+
+				return $result;
+			}
+		}
+
 		function ValiderPassword($password){
 			//il restera ici à faire la validation du code dans la BD...
 			//ceci n'est pas bon pour l'instant

@@ -18,6 +18,7 @@ div.Ctn{
   	padding-bottom: 20px;
   	margin-top: 2em;
 }
+
 @media only screen and (orientation: portrait){
   div.InfoPorte{
     width: 300px;
@@ -75,7 +76,7 @@ div.Ctn{
 }
 
 div.InfoConfig{
-	width: 40%;
+	width: 400px;
   min-width: 300px;
 	height: auto;
 	

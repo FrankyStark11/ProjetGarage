@@ -1,5 +1,6 @@
 <?php
 	include_once("../app/models/Users.php");
+	include_once("../app/models/Admin.php");
 	class Users extends Controller
 	{
 		public function Accueil(){
@@ -21,7 +22,10 @@
 				parent::view('Users/Controle');
 			}
 			elseif($retour["Type"] == '1'){
-				parent::view('Admin/GestionCode');
+				$admin = new modAdmins();
+				$result = $admin->GetNomDistributeurs();
+				$RDY = $result;
+				parent::view('Admin/GestionCode',['LstDistributeur'=>$RDY]);
 			}
 			else
 			{
