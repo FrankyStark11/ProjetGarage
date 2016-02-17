@@ -19,10 +19,16 @@ function EffacePassword(){
 function AjouterDivInfoPorte(Nom,etat,NoPin){
 	
 Main = document.getElementById("DivInfo");
-
+if(etat == '0'){
 var div_0 = document.createElement('div');
    div_0.align = "center";
-   div_0.className = "InfoPorte";
+   div_0.className = "InfoPorteOuverte";
+}
+else{
+  var div_0 = document.createElement('div');
+  div_0.align = "center";
+  div_0.className = "InfoPorteFermer";
+}
 
    var input_0 = document.createElement('input');
       input_0.type = "hidden";
