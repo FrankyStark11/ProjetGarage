@@ -68,6 +68,12 @@ session_start();
 			$admin->SetDistributeurs();
 			parent::view('Admin/GestionCode');
 		}
+		
+		public function UpdateDistributeurs(){
+			$admin = new modAdmins();
+			$admin->UpdateDistributeurs($_POST);
+			//$this->GestionCodes();
+		}
 
 		/*==============================================
 			Gestion de securité

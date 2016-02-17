@@ -186,9 +186,9 @@ function CreerNouvDist(nombre){
 		var td_0 = document.createElement('td');
 
 		var input_0 = document.createElement('input');
-		input_0.type = "text";
-		input_0.className = "TextMdp";
-		input_0.name = "nom";
+		input_0.type = "textNom";
+		input_0.className = "TextMpd";
+		input_0.name = "nom" + "-" +code;
 		input_0.placeholder = "Distributeur";
 		td_0.appendChild( input_0 );
 
@@ -198,9 +198,9 @@ function CreerNouvDist(nombre){
 		var td_1 = document.createElement('td');
 
 		var input_1 = document.createElement('input');
-		input_1.name = "extention";
-		input_1.className = "TextMdp";
-		input_1.type = "text";
+		input_1.name = "ext" + "-" + code;
+		input_1.className = "TextMpd";
+		input_1.type = "textExt";
 		input_1.placeholder = "@msg.distributeur.com";
 		td_1.appendChild( input_1 );
 
@@ -257,8 +257,8 @@ function makeid()
 function GarnirInputDistributeurs(distributeurs){
 	table = document.getElementById("tblDistributeurs");
 	
-	nom = document.getElementsByName("nom");
-	extention = document.getElementsByName("extention");
+	nom = document.querySelectorAll("input[type=textNom]");
+	extention = document.querySelectorAll("input[type=textExt]");
 	
 	for(i = 0; i < distributeurs.length; i++){
 		nom[i].value = distributeurs[i]["Nom"];
