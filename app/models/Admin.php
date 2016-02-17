@@ -175,5 +175,42 @@
 			return $distributeurs;
 		}
 		
+		function UpdateDistributeurs($distributeurs){
+			//Construit les tableaux
+			$nom=array();
+			$ext=array();
+			
+			
+			foreach($distributeurs as $key => $value){
+				if($value != ""){
+					$exp_key = explode('-',$key);
+					if($exp_key[0] == 'nom'){
+						array_push($nom, $value);
+					}
+					elseif($exp_key[0] == 'ext'){
+						array_push($ext, $value);
+					}
+				}
+			}
+			
+			//Insert les valeurs dans la BD
+			
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("DELETE FROM Distributeur");
+			$sql->execute();
+			
+			print_r($nom);
+			print_r($ext);
+			
+			for($i = 0; $i < count($nom); $i++){
+				$sql = $db->prepare("INSERT INTO Distributeur ('Nom','Extention') VALUES (:nom, :extention)");
+				$sql->bindValue(":nom", $nom[$i]);
+				$sql->bindValue(":extention", $ext[$i]);
+				
+				$sql->execute();
+			}
+		}
+		
 	}
 ?>

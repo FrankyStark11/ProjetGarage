@@ -20,10 +20,16 @@
 		
 	</head>
 	<body onload="InitialiserEditDistributeur(nombre, distributeurs)">
-		<table id="tblDistributeurs">
-	
-		</table>
-		
-		<input type="button" onclick="CreerNouvDist(1)">
+		<form method="post" action="/index.php/Admin/UpdateDistributeurs">
+			
+			<div class="InfoConfig">
+				<table id="tblDistributeurs">
+			
+				</table>
+				
+				<input type="button" onclick="CreerNouvDist(1)" value="Ajouter">
+				<input type="submit" value="Confirmer">
+			</div>
+		</form>
 	</body>
 </html>
