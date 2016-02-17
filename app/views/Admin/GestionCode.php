@@ -1,3 +1,6 @@
+<?php
+	$LstDistributeur = $data['LstDistributeur'];
+?>
 <html>
 	<head>
 		<title>Garage</title>
@@ -71,7 +74,7 @@
 		</div>	
 		<div class="InfoConfig">
 			<form method="post" action="">
-				<h1>1010Gestion de la sécurité</h1>
+				<h1>Gestion de la sécurité</h1>
 				<table class="config">
 					<form method="post" action="/index.php/Admin/ChangeCheckSMS">
 						<tr>
@@ -102,9 +105,19 @@
 							</tr>
 							<tr>
 								<td class="config">
-									<select class="TextMdp" name="lstDist">
-										
+									<select class="TextMpd" name="lstDist">
+										<?php
+											for ($i = 0; $i < count($LstDistributeur); $i++) {
+												echo "<option name='". $i."'>". $LstDistributeur[$i]["Nom"] ."</option>";
+											}
+											
+										?>
 									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button>
 								</td>
 							</tr>
 						</form>
@@ -125,6 +138,11 @@
 									<button class="ChangerBtnTime" type="submit" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
 								</td>
 							</tr>
+							<tr>
+								<td>
+									<button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button>
+								</td>
+							</tr>
 						</form>
 
 				</table>
@@ -133,7 +151,43 @@
 			
 		<div class="InfoConfig">
 			<form method="post" action="">
-				<h1>Ajout et modification de GPIO</h1>
+				<h1>Ajout de GPIO</h1>
+				<table >
+					<tr>
+						<td>
+							Numéro PIN :
+						</td>
+						<td>
+							<input name="NoPin" type="number" pattern="\d*" class="TextMpd" placeholder="# PIN"></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Nom de l'entré :
+						</td>
+						<td>
+							<input name="Nom" type="text" class="TextMpd" placeholder="Nom"></input>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Mode I/O :
+						</td>
+						<td>
+							<select name="Mode" class="TextMpd">
+								<option selected value="in"> IN </option>
+								<option value="out"> OUT </option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<button class="ChangerBtn" type="submit" value="Ajouter"><span>Ajouter</span></button>
+						</td>
+					</tr>
+				</table>
 			</form>
 		</div>
 		
