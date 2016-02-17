@@ -219,12 +219,7 @@
 			$sql = $db->prepare("DELETE FROM Distributeur");
 			$sql->execute();
 			
-<<<<<<< HEAD
-			print_r($nom);
-			print_r($ext);
 			
-=======
->>>>>>> 5d0f009e9b06dca6c33d0a57e744df11d7884299
 			for($i = 0; $i < count($nom); $i++){
 				$sql = $db->prepare("INSERT INTO Distributeur ('Nom','Extention') VALUES (:nom, :extention)");
 				$sql->bindValue(":nom", $nom[$i]);
