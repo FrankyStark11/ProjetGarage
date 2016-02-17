@@ -72,7 +72,11 @@ session_start();
 		public function UpdateDistributeurs(){
 			$admin = new modAdmins();
 			$admin->UpdateDistributeurs($_POST);
+<<<<<<< HEAD
 			//$this->GestionCodes();
+=======
+			$this->GestionCodes();
+>>>>>>> 5d0f009e9b06dca6c33d0a57e744df11d7884299
 		}
 
 		/*==============================================
@@ -90,7 +94,7 @@ session_start();
 
 		public function ChangePhone(){
 			$admin = new modAdmins();
-			$admin->ChangePhone($_POST["telephone"]);
+			$admin->ChangePhone($_POST["telephone"], $_POST["lstDist"]);
 			$this->GestionCodes();
 		}
 

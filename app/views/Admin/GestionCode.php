@@ -113,6 +113,7 @@
 											
 										?>
 									</select>
+									 <a href="/index.php/Admin/EditDistributeurs">+</a> 
 								</td>
 							</tr>
 							<tr>
