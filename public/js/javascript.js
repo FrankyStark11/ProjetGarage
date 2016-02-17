@@ -16,9 +16,8 @@ function EffacePassword(){
    ob.value = str;
 }
 
-function AjouterDivInfoPorte(NoPin,Nom){
-
-
+function AjouterDivInfoPorte(Nom,etat,NoPin){
+	
 Main = document.getElementById("DivInfo");
 
 var div_0 = document.createElement('div');
@@ -27,7 +26,7 @@ var div_0 = document.createElement('div');
 
    var input_0 = document.createElement('input');
       input_0.type = "hidden";
-      input_0.value = Nom;
+      input_0.value = NoPin;
    div_0.appendChild( input_0 );
 
 
@@ -35,21 +34,32 @@ var div_0 = document.createElement('div');
       h1_0.appendChild( document.createTextNode(Nom) );
    div_0.appendChild( h1_0 );
 
-
+if(etat == '1'){
    var h2_0 = document.createElement('h2');
       h2_0.appendChild( document.createTextNode(" Etat : Fermée ") );
    div_0.appendChild( h2_0 );
-
+}
+else{
+	var h2_0 = document.createElement('h2');
+	h2_0.appendChild( document.createTextNode(" Etat : Ouvert ") );
+	div_0.appendChild( h2_0 );
+}
 
    var button_0 = document.createElement('button');
       button_0.type = "button";
       button_0.className = "ChangerBtn";
       button_0.value = "Action";
 
+if(etat == '1'){
       var span_0 = document.createElement('span');
          span_0.appendChild( document.createTextNode("Ouvrir") );
       button_0.appendChild( span_0 );
-
+}
+else{
+	var span_0 = document.createElement('span');
+	span_0.appendChild( document.createTextNode("Fermer") );
+	button_0.appendChild( span_0 );
+}
    div_0.appendChild( button_0 );
 
 Main.appendChild( div_0 );
@@ -57,7 +67,7 @@ Main.appendChild( div_0 );
 }
 
 function InitialiserPageControle(){
-   AfficherEtatPorte();
+  // AfficherEtatPorte();
    InitialiserPIN();
 }
 
@@ -70,12 +80,9 @@ function InitialiserPIN(){
             while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
 
-            var data = JSON.parse(xmlhttp.responseText);
-         }     
-            //initialise des PIN ici
-
-            
-            }
+		    var data = JSON.parse(xmlhttp.responseText);
+		}     
+	}
         };
         xmlhttp.open("get", "/index.php/Admin/GetAllModePin", true);
         xmlhttp.send();
@@ -97,7 +104,7 @@ function AfficherEtatPorte(){
                var Nom = data[i]['Nom'] ;
                   var Pin = data[i]['No_pin'] ;
 
-                  AjouterDivInfoPorte(Pin,Nom);
+                  AjouterDivInfoPorte(Pin,Nom,'0');
             }
             }
         };

@@ -69,27 +69,26 @@
 				</form>
 			</table>
 		</div>	
-			<div class="InfoConfig">
-				<form method="post" action="">
-				<h1>Gestion de la sécurité</h1>
-					<table class="config">
-						
-						<form method="post" action="/index.php/Admin/ChangeCheckSMS">
-							<tr>
-								<td class="config">
-									<h2>Sécurité SMS</h2>
-								</td>
-							</tr>
-							<!-- <input type="checkbox" name="active" value="active">Activé -->
-							<tr>
-								<td class="config">
+		<div class="InfoConfig">
+			<form method="post" action="">
+				<h1>1010Gestion de la sécurité</h1>
+				<table class="config">
+					<form method="post" action="/index.php/Admin/ChangeCheckSMS">
+						<tr>
+							<td class="config">
+								<h2>Sécurité SMS</h2>
+							</td>
+						</tr>
+						<!-- <input type="checkbox" name="active" value="active">Activé -->
+						<tr>
+							<td class="config">
 
-									<div class="Check">
-										<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
-									</div>
-								</td>
-							</tr>
-						</form>
+								<div class="Check">
+									<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
+								</div>
+						</td>
+						</tr>
+					</form>
 
 
 						<form method="post" action="/index.php/Admin/ChangePhone">
@@ -128,9 +127,16 @@
 							</tr>
 						</form>
 
-					</table>
-				</form>
-			</div>
+				</table>
+			</form>
 		</div>
+			
+		<div class="InfoConfig">
+			<form method="post" action="">
+				<h1>Ajout et modification de GPIO</h1>
+			</form>
+		</div>
+		
+	</div>
 	</body >
 </html>

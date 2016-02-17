@@ -38,7 +38,7 @@
 			}
 			else
 			{
-				$sql = $db->prepare("SELECT No_pin,Mode FROM GPIO"); 
+				$sql = $db->prepare("SELECT Nom,No_pin,Mode FROM GPIO"); 
 				$sql->execute(); 
 
 				$result =  $sql->fetchAll(PDO::FETCH_ASSOC);

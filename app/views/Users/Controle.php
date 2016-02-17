@@ -1,5 +1,4 @@
 <?php
-	
 ?>
 <html>
 
@@ -29,24 +28,42 @@
     		system ("gpio mode ". $temp ." ". $Mode );
 
     		if($Mode == "out"){
-    			system ("gpio write ".$temp." on");
+    			system ("gpio write ". $temp." on");
     		}
 		}
 
-		
+		function AfficherPorte(){
+			$data = $_SESSION['PINMODE'];
+			
+			for ($i = 0; $i < count($data); $i++) {
+			
+				$Mode = $data[$i]["Mode"];
+				
+				if($Mode == 'in'){
+				
+				$pin = intval($data[$i]["No_pin"]);
+				$porte = system ( "gpio read ". $pin);
+				$nom = $data[$i]["Nom"];
+				
+				echo '<script> AjouterDivInfoPorte("'.$nom.'","'.$porte.'","'.$pin.'"); </script>';
+				}
+			}
+		}
 
 	?>
 </head>
 
-<body onload="InitialiserPageControle()">
+<body >
 	<div class="NavBar">
 		<ul>
 		<li><a class="quit" href="/index.php/Admin/Accueil"> Quitter</a></li>
-		<li><a href="#" onClick="AfficherEtatPorte();"> Rafraichir </a></li>
 		</ul>
 	</div>
 	<div class="Ctn" align="center" id="DivInfo">
-			<div class="InfoPorte" align="center">
+	<?php 
+		AfficherPorte();
+	?>	
+			<!--<div class="InfoPorte" align="center">
 			<input type="hidden" value="MP1">
 				<h1>Porte 1 </h1>
 					<h2> Etat : 
@@ -234,7 +251,7 @@
 				<h2> nouvelle entrée 
 					</h2>
 				<button type="button" value="Action" onclick="AjouterDivInfoPorte(21,'MP1')" class="ChangerBtn"><span> + </span></button>			
-			</div>
+			</div> -->
 	</div>	
 
 </body>

@@ -59,7 +59,7 @@
 			}
 			else
 			{
-				$sql = $db->prepare("SELECT No_pin,Mode FROM GPIO"); 
+				$sql = $db->prepare("SELECT Nom,No_pin,Mode FROM GPIO"); 
 				$sql->execute(); 
 
 				$result =  $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -101,8 +101,9 @@
 			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
 		
 			//$to      = '450-421-1567@msg.telus.com';
-			$to      = 'Otid91@gmail.com';
+			//$to      = 'Otid91@gmail.com';
 			//$to      = '514-914-9108@msg.videotron.com';
+			$to      = 'francis.marsolaisv4si@gmail.com';
 
 			$subject = 'Réinitialisation administrateur';
 			$headers = 'From: webmaster@example.com' . "\r\n" .

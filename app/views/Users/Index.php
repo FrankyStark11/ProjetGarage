@@ -1,3 +1,6 @@
+<?php 
+
+?>
 <html>
 	<head>
 		<title>Garage</title>
@@ -9,7 +12,7 @@
 		<script src="/js/javascript.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="/css/style2.css" />
-
+		
 	</head>
 	<body onload="initialiser()">
 		<div class="CenterCode">
