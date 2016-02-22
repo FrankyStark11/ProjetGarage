@@ -6,6 +6,16 @@
 		public function Accueil(){
 			
 		}
+
+		public function AccesPorte(){
+
+			$NoPin = $_POST["PIN"];
+
+			system ("gpio write " . $NoPin . " off");
+			sleep ( 1 );
+			system ("gpio write  " . $NoPin . " on");
+			
+		}
 		
 		public function Password(){
 

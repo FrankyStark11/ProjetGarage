@@ -59,6 +59,7 @@
 		<li><a class="quit" href="/index.php/Admin/Accueil"> Quitter</a></li>
 		</ul>
 	</div>
+	
 	<div class="Ctn" align="center" id="DivInfo">
 	<?php 
 		AfficherPorte();

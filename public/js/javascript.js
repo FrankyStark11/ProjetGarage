@@ -55,6 +55,7 @@ else{
       button_0.type = "button";
       button_0.className = "ChangerBtn";
       button_0.value = "Action";
+      button_0.onclick = "AppelControlePin("+NoPin+")";
 
 if(etat == '1'){
       var span_0 = document.createElement('span');
@@ -77,6 +78,14 @@ function InitialiserPageControle(){
    InitialiserPIN();
 }
 
+function AppelControlePin(NoPin){
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("POST", "/index.php/Users/AccesPorte", true);
+      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlhttp.send("PIN=" + NoPin);  
+}
+
 function InitialiserPIN(){
       var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -92,7 +101,7 @@ function InitialiserPIN(){
         };
         xmlhttp.open("get", "/index.php/Admin/GetAllModePin", true);
         xmlhttp.send();
-      }
+}
 
 function AfficherEtatPorte(){
       var xmlhttp = new XMLHttpRequest();
