@@ -11,6 +11,8 @@
 
 			$NoPin = $_POST["PIN"];
 
+			$NoPin = $NoPin -4;
+
 			system ("gpio write " . $NoPin . " off");
 			sleep ( 1 );
 			system ("gpio write  " . $NoPin . " on");
