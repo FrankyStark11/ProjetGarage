@@ -100,6 +100,9 @@
 			$db = null;
 		}
 		
+		/*
+			Permet de changer le mot de passe admin
+		*/
 		function ResetAdmin($password){
 			$db = $this->connectDB();
 			
@@ -112,24 +115,41 @@
 
 		}
 		
+		/*
+			Permet d'envoyer un email de modification du mot de passe
+		*/
 		function mdpOublie(){
 			$prov = $_SERVER['REMOTE_ADDR'];
 			$ip = "http://".$_SERVER['SERVER_ADDR'];
 			
 			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
-		
-			//$to      = '450-421-1567@msg.telus.com';
-			//$to      = 'Otid91@gmail.com';
-			//$to      = '514-914-9108@msg.videotron.com';
-			$to      = 'francis.marsolaisv4si@gmail.com';
+			$to      = $this->getCurrentEmail();
 
 			$subject = 'Réinitialisation administrateur';
 			$headers = 'From: webmaster@example.com' . "\r\n" .
 			'Reply-To: webmaster@example.com' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 
-			mail($to, $subject, $message, $headers);
-			
+			mail($to, $subject, $message, $headers);	
+		}
+
+		function getCurrentEmail(){
+			$db = $this->connectDB();
+
+			//va chercher le téléphone et le nom du distributeur
+			$sql = $db->prepare("SELECT Telephone, Distributeur FROM Securite");
+			$sql->execute();
+			$info =  $sql->fetchAll(PDO::FETCH_ASSOC);
+
+			//va chercher l'extention du distributeur selon le nom envoyé
+			$sql = $db->prepare("SELECT Extention FROM Distributeur WHERE Nom = :exten");
+			$sql->bindValue(":exten", $info["Distributeur"]);
+			$sql->execute();
+			$dist = $sql->fetch(PDO::FETCH_ASSOC);
+
+			//retourne la string vers qui envoyer le email
+			return $info["Telephone"].$dist["Extention"];
+
 		}
 
 
