@@ -139,7 +139,7 @@
 			//va chercher le téléphone et le nom du distributeur
 			$sql = $db->prepare("SELECT Telephone, Distributeur FROM Securite");
 			$sql->execute();
-			$info =  $sql->fetchAll(PDO::FETCH_ASSOC);
+			$info =  $sql->fetch(PDO::FETCH_ASSOC);
 
 			//va chercher l'extention du distributeur selon le nom envoyé
 			$sql = $db->prepare("SELECT Extention FROM Distributeur WHERE Nom = :exten");
@@ -149,7 +149,6 @@
 
 			//retourne la string vers qui envoyer le email
 			return $info["Telephone"].$dist["Extention"];
-
 		}
 
 

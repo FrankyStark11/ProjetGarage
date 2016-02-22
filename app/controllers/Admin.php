@@ -106,7 +106,6 @@ session_start();
 			$this->GestionCodes();
 		}
 
-		
-		
+			
 	}
 ?>
