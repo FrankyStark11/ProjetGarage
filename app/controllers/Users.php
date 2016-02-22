@@ -24,8 +24,9 @@
 			elseif($retour["Type"] == '1'){
 				$admin = new modAdmins();
 				$result = $admin->GetNomDistributeurs();
-				$RDY = $result;
-				parent::view('Admin/GestionCode',['LstDistributeur'=>$RDY]);
+				$config = $admin->GetConfig();
+
+				parent::view('Admin/GestionCode',['LstDistributeur'=>$result, 'config'=>$config ]);
 			}
 			else
 			{

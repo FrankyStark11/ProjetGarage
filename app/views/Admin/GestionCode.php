@@ -1,5 +1,27 @@
 <?php
-	$LstDistributeur = $data['LstDistributeur'];
+	$distributeur = $data['LstDistributeur'];
+	$config = $data['config'];
+
+	//contruit la liste de distributeur
+	$LstDistributeur = array();
+	array_push($LstDistributeur, $config["Distributeur"]);
+
+	for ($i = 0; $i < count($distributeur); $i++) {
+		if($distributeur[$i]["Nom"] != $LstDistributeur[0]){
+			array_push($LstDistributeur, $distributeur[$i]["Nom"]);
+		}
+	}
+
+	//checked sms
+	$check = "";
+	if($config["SecureOnOff"] == "ON"){
+		$check = "checked";
+	}
+
+
+	//$LstDistributeur = array_merge($distributeur, $LstDistributeur);
+
+	print_r($config);
 ?>
 <html>
 	<head>
@@ -73,7 +95,6 @@
 			</table>
 		</div>	
 		<div class="InfoConfig">
-			<form method="post" action="">
 				<h1>Gestion de la sécurité</h1>
 				<table class="config">
 					<form method="post" action="/index.php/Admin/ChangeCheckSMS">
@@ -87,9 +108,18 @@
 							<td class="config">
 
 								<div class="Check">
-									<input class="checkConfig" type="checkbox" value="None" name="check" /><label class="check">Protection SMS</label>
+									
+									<?php
+										echo "<input class='checkConfig' type='checkbox' value='None' name='check'".$check." />"
+									?>
+									<label class="check">Protection SMS</label>
 								</div>
 						</td>
+						</tr>
+						<tr>
+							<td>
+								<button class="ChangerBtn" type="submit" value="Sauvegarder"><span>Changer </span></button>
+							</td>
 						</tr>
 					</form>
 
@@ -101,14 +131,16 @@
 								</td>
 							</tr>
 							<tr>
-								<td class="config"><input class="TextMpd" type="text" placeholder="# téléphone" name="telephone"></td>
+								<?php
+									echo "<td class='config'><input class='TextMpd' type='text' placeholder='# téléphone' name='telephone' value='".$config['Telephone']."'></td>"
+								?>
 							</tr>
 							<tr>
 								<td class="config">
 									<select class="TextMpd" name="lstDist">
 										<?php
 											for ($i = 0; $i < count($LstDistributeur); $i++) {
-												echo "<option name='". $i."'>". $LstDistributeur[$i]["Nom"] ."</option>";
+												echo "<option name='". $i."'>". $LstDistributeur[$i] ."</option>";
 											}
 											
 										?>
@@ -131,12 +163,15 @@
 								</td>
 							</tr>
 							<tr>
-								<td class="config"><input class="TextMpd" id="DelaisText" type="text" placeholder="00:00" value="1:00" readonly name="timer"></td>
+
+								<?php
+									echo "<td class='config'><input class='TextMpd' id='DelaisText' type='text' placeholder='00:00' name='timer' readonly value='".$config['Delais']."'></td>"
+								?>
 							</tr>
 							<tr>
 								<td class="config">
-									<button class="ChangerBtnTime" type="submit" name="BtnAdd" value="add" onclick="AjouterTempsZoneDelais()">+</button>
-									<button class="ChangerBtnTime" type="submit" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
+									<button class="ChangerBtnTime" type="button" name="BtnAdd" value="add" onclick="AjouterTempsZoneDelais()">+</button>
+									<button class="ChangerBtnTime" type="button" name="BtnSub" value="sub" onclick="RetirerTempsZoneDelais()">-</button>
 								</td>
 							</tr>
 							<tr>
@@ -147,7 +182,6 @@
 						</form>
 
 				</table>
-			</form>
 		</div>
 			
 		<div class="InfoConfig">

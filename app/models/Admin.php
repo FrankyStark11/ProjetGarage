@@ -228,6 +228,21 @@
 				$sql->execute();
 			}
 		}
-		
+
+		/*
+			Retourne les paramètre de configuration admin
+		*/
+		function GetConfig(){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("SELECT SecureOnOff, Telephone, Distributeur, Delais FROM Securite");
+			$sql->execute();
+			$config =  $sql->fetch(PDO::FETCH_ASSOC);
+			
+			$db = null;
+			$sql = null;
+
+			return $config;		
+		}	
 	}
 ?>

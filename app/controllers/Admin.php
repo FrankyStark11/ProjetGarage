@@ -9,7 +9,10 @@ session_start();
 		}
 
 		public function GestionCodes(){
-			parent::view('Admin/GestionCode');
+			$admin = new modAdmins();
+			$config = $admin->GetConfig();
+
+			parent::view('Admin/GestionCode', ['config' => $config]);
 		}
 
 		public function GetAllPin(){
@@ -82,10 +85,13 @@ session_start();
 		public function ChangeCheckSMS(){
 			$admin = new modAdmins();
 
-			echo $_POST["check"];
+			$set = "OFF";
+			if(isset($_POST["check"])){
+				$set = "ON";
+			}
 
-			//$admin->ChangeCheckSMS($_POST["check"]);
-			//$this->GestionCodes();
+			$admin->ChangeCheckSMS($set);
+			$this->GestionCodes();
 		}
 
 		public function ChangePhone(){
@@ -99,6 +105,7 @@ session_start();
 			$admin->ChangeTimer($_POST["timer"]);
 			$this->GestionCodes();
 		}
+
 		
 		
 	}
