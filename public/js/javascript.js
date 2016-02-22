@@ -51,25 +51,29 @@ else{
 	div_0.appendChild( h2_0 );
 }
 
-   var button_0 = document.createElement('button');
+  var button_0 = document.createElement('button');
       button_0.type = "button";
+      button_0.id = "Btn"+NoPin;
       button_0.className = "ChangerBtn";
       button_0.value = "Action";
-      button_0.onclick = "AppelControlePin("+NoPin+")";
+      button_0.onclick = function() { AppelControlePin(NoPin) };
 
 if(etat == '1'){
-      var span_0 = document.createElement('span');
-         span_0.appendChild( document.createTextNode("Ouvrir") );
-      button_0.appendChild( span_0 );
+  var span_0 = document.createElement('span');
+      span_0.appendChild( document.createTextNode("Ouvrir") );
+    button_0.appendChild( span_0 );
 }
 else{
 	var span_0 = document.createElement('span');
-	span_0.appendChild( document.createTextNode("Fermer") );
-	button_0.appendChild( span_0 );
+	    span_0.appendChild( document.createTextNode("Fermer") );
+	  button_0.appendChild( span_0 );
 }
    div_0.appendChild( button_0 );
 
 Main.appendChild( div_0 );
+
+//var btn = document.getElementById("Btn"+NoPin);
+//btn.addEventListener("click",function() { AppelControlePin(NoPin)} );
 
 }
 
