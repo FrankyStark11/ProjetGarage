@@ -55,7 +55,7 @@ else{
       button_0.type = "button";
       button_0.className = "ChangerBtn";
       button_0.value = "Action";
-      button_0.onclick = AppelControlePin(NoPin);
+      button_0.onclick = "AppelControlePin("+NoPin+")";
 
 if(etat == '1'){
       var span_0 = document.createElement('span');
