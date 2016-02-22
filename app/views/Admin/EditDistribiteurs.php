@@ -22,7 +22,7 @@
 	<body onload="InitialiserEditDistributeur(nombre, distributeurs)">
 		<form method="post" action="/index.php/Admin/UpdateDistributeurs">
 			
-			<div class="InfoConfig">
+			<div class="GestionEmailBox">
 				<table id="tblDistributeurs">
 			
 				</table>
