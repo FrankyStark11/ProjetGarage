@@ -9,6 +9,7 @@ function feedPassword(e){
 	ob.value += e.value;
 }
 
+//efface un caractere dans le champs de mot de passe
 function EffacePassword(){
    ob = document.getElementById("idpassword");
    str = ob.value;
@@ -16,6 +17,10 @@ function EffacePassword(){
    ob.value = str;
 }
 
+//ajoute une porte dans la page de controle selon 3 param
+//Nom : nom que porte la porte
+//etat : savoir si la porte est ouverte = 0 ou fermé = 1
+//NoPin : numero de la pin pour y associer le controle de fermeture/ouverture
 function AjouterDivInfoPorte(Nom,etat,NoPin){
 	
 Main = document.getElementById("DivInfo");
@@ -72,16 +77,14 @@ else{
 
 Main.appendChild( div_0 );
 
-//var btn = document.getElementById("Btn"+NoPin);
-//btn.addEventListener("click",function() { AppelControlePin(NoPin)} );
-
 }
 
+//sur le chargement de la page de controle, demare les initialisation necesaire
 function InitialiserPageControle(){
-  // AfficherEtatPorte();
    InitialiserPIN();
 }
 
+//sur appel, envoie le numero de pin appeler au controle par ajax
 function AppelControlePin(NoPin){
 
       var xmlhttp = new XMLHttpRequest();
@@ -90,6 +93,7 @@ function AppelControlePin(NoPin){
       xmlhttp.send("PIN=" + NoPin);  
 }
 
+//initialise les pin, vide la page de controle et appel la fonction qui remplie la page
 function InitialiserPIN(){
       var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -107,6 +111,7 @@ function InitialiserPIN(){
         xmlhttp.send();
 }
 
+//remplir la page de controle avec les portes 
 function AfficherEtatPorte(){
       var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -131,6 +136,7 @@ function AfficherEtatPorte(){
         xmlhttp.send();
       }
 
+//augmente le delais de 10 secondes
 function AjouterTempsZoneDelais(){
 
    var ZoneDelais = document.getElementById("DelaisText");
@@ -151,6 +157,7 @@ function AjouterTempsZoneDelais(){
 
 }
 
+//reduit le delais de 10 secondes
 function RetirerTempsZoneDelais(){
 
    var ZoneDelais = document.getElementById("DelaisText");

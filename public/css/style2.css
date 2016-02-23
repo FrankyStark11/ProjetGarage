@@ -375,9 +375,8 @@ div.ConfigBox{
 
 @media only screen and (orientation: landscape){
   .confirmer{
-  	background-color: #838B8F;
-    background-image: url(../images/MetalPattern.png);
-    background-size: auto;
+
+  	background-color: #3e8e41;
 
   	font-size: 28px;
     font-family: 'Ubuntu', 'Lato', sans-serif;
@@ -431,9 +430,7 @@ div.ConfigBox{
 
 @media only screen and (orientation: portrait){
   .confirmer{
-    background-color: #838B8F;
-    background-image: url(../images/MetalPattern.png);
-    background-size: auto;
+    background-color: #3e8e41;
 
     font-size: 28px;
     font-family: 'Ubuntu', 'Lato', sans-serif;

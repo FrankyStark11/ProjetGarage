@@ -39,14 +39,14 @@
 						<td><button class="digit" type="button" name="9" value="9" onclick="feedPassword(this)"><span>9</span></button></td>
 					</tr>
 					<tr align="center">
-						<td><a href="/index.php/Admin/mdpOublie"><button class="digit" type="button" name="0" value="" ></a></td>
+						<td><button class="digit" type="button" action="/index.php/Admin/mdpOublie" name="0" value="" ></td>
 						<td><button class="digit" type="button" name="0" value="0" onclick="feedPassword(this)"><span>0</span></button></td>
 						<td><button class="digit" type="button" name="9" value="<=" onclick="EffacePassword()"><span>Back</span></button></td>
 					</tr>
 				</table>
 				<table>
 					<tr>
-						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Confirmer </span></button></td>
+						<td><button type="submit" class="confirmer" style="vertical-align:middle"><span>Connexion </span></button></td>
 					</tr>
 				</table>
 			</form>
