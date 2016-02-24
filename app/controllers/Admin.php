@@ -45,9 +45,12 @@ session_start();
 		}
 		
 		public function resetmdp(){
-			$admin = new modAdmins();
+			$code = $_GET['code'];
+
+			echo $code;
+			/*$admin = new modAdmins();
 			$admin->ResetAdmin($_POST["password"]);
-			parent::view('Users/Index');
+			parent::view('Users/Index');*/
 		}
 		
 		public function EditDistributeurs(){
