@@ -45,9 +45,10 @@ session_start();
 
 			$admin = new modAdmins();
 			$retour = $admin->ValiderToken($code);
-			echo $retour;
-
-			//parent::view('Admin/ResetPassword');
+			
+			if($retour == 1){
+				parent::view('Admin/ResetPassword');
+			}
 		}
 		
 		public function resetmdp(){

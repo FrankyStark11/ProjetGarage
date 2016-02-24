@@ -297,8 +297,6 @@
 			$sql->execute();
 			
 			$config =  $sql->fetch(PDO::FETCH_ASSOC);
-			
-			print_r($config);
 
 			if(isset($config["String"])){
 				$retour = true;
