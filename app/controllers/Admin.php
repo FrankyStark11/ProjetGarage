@@ -42,11 +42,9 @@ session_start();
 		
 		public function showResetPassword(){
 			$code = $_GET['code'];
-			echo $code;
 
 			$admin = new modAdmins();
 			$retour = $admin->ValiderToken($code);
-
 			echo $retour;
 
 			//parent::view('Admin/ResetPassword');
