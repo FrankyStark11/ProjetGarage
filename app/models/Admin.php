@@ -123,10 +123,9 @@
 
 			//inscrit le code temporaire dans la bd
 			$db = $this->connectDB();
-			$sql = $db->prepare("INSERT INTO mdpOublie(String, PWDate) VALUES(:string, :datetime)");
+			$sql = $db->prepare("INSERT INTO mdpOublie(String, PWDate) VALUES(:string, DATETIME('now','localtime'))");
 
 			$sql->bindValue(":string", $lecode);
-			$sql->bindValue(":datetime", date('Y-m-d H:i:s'));
 			
 			$sql->execute();
 			$db = null;
@@ -292,7 +291,7 @@
 		function ValiderToken($string){
 			$db = $this->connectDB();
 
-			$sql = $db->prepare("SELECT *FROM mdpOublie WHERE String = :token AND PWDate < DATETIME('now','localtime','+10 minutes')");
+			$sql = $db->prepare("SELECT * FROM mdpOublie WHERE String = :token AND  PWDate > DATETIME('now','localtime','-10 minutes')");
 			$sql->bindValue(":token", $string);
 			
 			$sql->execute();
