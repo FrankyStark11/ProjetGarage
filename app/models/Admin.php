@@ -300,7 +300,7 @@
 			
 			print_r($config);
 
-			if($config["String"] != ""){
+			if(isset($config["String"])){
 				$retour = true;
 			}
 			else{
