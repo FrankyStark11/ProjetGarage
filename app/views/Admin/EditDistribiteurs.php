@@ -20,15 +20,20 @@
 		
 	</head>
 	<body onload="InitialiserEditDistributeur(nombre, distributeurs)">
+		<div class="NavBar">
+			<ul>
+			  <li><a class="quit" href="/index.php/Admin/GestionCodes"> Retour </a></li>
+			</ul>
+		</div>
 		<form method="post" action="/index.php/Admin/UpdateDistributeurs">
 			
 			<div class="GestionEmailBox">
 				<table id="tblDistributeurs">
 			
 				</table>
-				
-				<input type="button" onclick="CreerNouvDist(1)" value="Ajouter">
-				<input type="submit" value="Confirmer">
+				<br>				
+				<input class="ChangerBtn" type="button" onclick="CreerNouvDist(1)" value="Ajouter">
+				<input class="ChangerBtn" type="submit" value="Confirmer">
 			</div>
 		</form>
 	</body>
