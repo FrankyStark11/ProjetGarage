@@ -119,7 +119,7 @@
 			Permet d'envoyer un email de modification du mot de passe
 		*/
 		function mdpOublie(){
-			$lecode = $this->generateRandomString()
+			$lecode = $this->generateRandomString();
 
 			//inscrit le code temporaire dans la bd
 			$db = $this->connectDB();
@@ -136,7 +136,7 @@
 			$prov = $_SERVER['REMOTE_ADDR'];
 			$ip = "http://".$_SERVER['SERVER_ADDR'];
 			
-			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword/".$lecode"\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
+			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword/".$lecode."\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
 			$to      = $this->getCurrentEmail();
 
 			$subject = 'Réinitialisation administrateur';
