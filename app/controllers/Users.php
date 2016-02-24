@@ -34,11 +34,7 @@
 				parent::view('Users/Controle');
 			}
 			elseif($retour["Type"] == '1'){
-				$admin = new modAdmins();
-				$result = $admin->GetNomDistributeurs();
-				$config = $admin->GetConfig();
-
-				parent::view('Admin/GestionCode',['LstDistributeur'=>$result, 'config'=>$config ]);
+				header("Location: ../Admin/GestionCodes");
 			}
 			else
 			{

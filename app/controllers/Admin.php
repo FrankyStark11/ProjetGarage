@@ -11,8 +11,9 @@ session_start();
 		public function GestionCodes(){
 			$admin = new modAdmins();
 			$config = $admin->GetConfig();
+			$result = $admin->GetNomDistributeurs();
 
-			parent::view('Admin/GestionCode', ['config' => $config]);
+			parent::view('Admin/GestionCode', ['LstDistributeur'=>$result, 'config' => $config]);
 		}
 
 		public function GetAllPin(){
