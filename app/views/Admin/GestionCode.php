@@ -11,17 +11,11 @@
 			array_push($LstDistributeur, $distributeur[$i]["Nom"]);
 		}
 	}
-
 	//checked sms
 	$check = "";
 	if($config["SecureOnOff"] == "ON"){
 		$check = "checked";
 	}
-
-
-	//$LstDistributeur = array_merge($distributeur, $LstDistributeur);
-
-	print_r($config);
 ?>
 <html>
 	<head>
