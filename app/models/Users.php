@@ -16,7 +16,7 @@
 			}
 			else
 			{
-				$sql = $db->prepare("SELECT Type FROM Utilisateurs WHERE Code = :password"); //prépare la requête
+				$sql = $db->prepare("SELECT Type,Nom FROM Utilisateurs WHERE Code = :password"); //prépare la requête
 
 				$sql->bindValue(":password", crypt($password,"st")); //met le login
 
@@ -27,6 +27,26 @@
 			}
 
 			return $result;
+		}
+
+		function AjouterEntreeLog($User,$Action){
+
+			$dir = 'sqlite:../app/bd/garage.sqlite';
+			$db = new PDO($dir);
+
+			if (is_null($db)) {
+				echo "erreur de la BD";
+			}
+			else
+			{
+				$sql = $db->prepare("INSERT INTO Logs (DateEntree,User,Action) VALUES ( DATETIME('now','localtime') , :U , :A)");
+
+				$sql->bindValue(":U",$User);
+				$sql->bindValue(":A",$Action);
+
+				$sql->execute();
+			}
+
 		}
 
 		function GetAllModePin(){

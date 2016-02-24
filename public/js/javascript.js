@@ -28,11 +28,13 @@ if(etat == '0'){
 var div_0 = document.createElement('div');
    div_0.align = "center";
    div_0.className = "InfoPorteOuverte";
+   div_0.name = "porte";
 }
 else{
   var div_0 = document.createElement('div');
   div_0.align = "center";
   div_0.className = "InfoPorteFermer";
+  div_0.id = "porte";
 }
 
    var input_0 = document.createElement('input');
@@ -45,35 +47,7 @@ else{
       h1_0.appendChild( document.createTextNode(Nom) );
    div_0.appendChild( h1_0 );
 
-if(etat == '1'){
-   var h2_0 = document.createElement('h2');
-      h2_0.appendChild( document.createTextNode(" Etat : Fermée ") );
-   div_0.appendChild( h2_0 );
-}
-else{
-	var h2_0 = document.createElement('h2');
-	h2_0.appendChild( document.createTextNode(" Etat : Ouvert ") );
-	div_0.appendChild( h2_0 );
-}
-
-  var button_0 = document.createElement('button');
-      button_0.type = "button";
-      button_0.id = "Btn"+NoPin;
-      button_0.className = "ChangerBtn";
-      button_0.value = "Action";
-      button_0.onclick = function() { AppelControlePin(NoPin) };
-
-if(etat == '1'){
-  var span_0 = document.createElement('span');
-      span_0.appendChild( document.createTextNode("Ouvrir") );
-    button_0.appendChild( span_0 );
-}
-else{
-	var span_0 = document.createElement('span');
-	    span_0.appendChild( document.createTextNode("Fermer") );
-	  button_0.appendChild( span_0 );
-}
-   div_0.appendChild( button_0 );
+div_0.onclick = function() { AppelControlePin(NoPin,Nom) };
 
 Main.appendChild( div_0 );
 
@@ -85,12 +59,31 @@ function InitialiserPageControle(){
 }
 
 //sur appel, envoie le numero de pin appeler au controle par ajax
-function AppelControlePin(NoPin){
+function AppelControlePin(NoPin,Nom){
 
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("POST", "/index.php/Users/AccesPorte", true);
-      xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      xmlhttp.send("PIN=" + NoPin);  
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {  
+      InscrireAction("Action sur porte " + Nom);           
+    }
+  };
+  xmlhttp.open("POST", "/index.php/Users/AccesPorte", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("PIN=" + NoPin);
+
+      
+}
+
+function InscrireAction(ActionP){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("POST", "/index.php/Users/AjouterEntreeLog", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send("Action=" + ActionP);
+
+  $("#DivMessage").fadeIn();
+  $("#DivMessage").fadeOut(3000);
+
+
 }
 
 //initialise les pin, vide la page de controle et appel la fonction qui remplie la page

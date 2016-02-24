@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/css/style2.css" />
 	<script src="/js/javascript.js"></script>
+	<script src="/js/jquery-1.12.1.min.js"></script>
 
 	<?php
 
@@ -55,11 +56,16 @@
 
 <body >
 	<div class="NavBar">
+
+	<div name="porte" class="Ctn_Message" id="DivMessage">
+		Action ajouté 
+	</div>
+
 		<ul>
-		<li><a class="quit" href="/index.php/Admin/Accueil"> Quitter</a></li>
+			<li><a class="quit" href="/index.php/Admin/Accueil"> Quitter</a></li>
 		</ul>
 	</div>
-	
+
 	<div class="Ctn" align="center" id="DivInfo">
 	<?php 
 		AfficherPorte();

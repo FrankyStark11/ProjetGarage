@@ -7,7 +7,6 @@ body{
 		-webkit-backface-visibility: hidden;
 	}
 
-
 div.Ctn{
 	width: 100%;
 	height: auto;
@@ -19,10 +18,22 @@ div.Ctn{
   	margin-top: 2em;
 }
 
+div.Ctn_Message{
+
+	width: 500px;
+	position: fixed;
+		top: 7px;
+		left: 7px;
+
+  	color: white;
+
+  	display: none;
+}
+
 @media only screen and (orientation: portrait){
   div.InfoPorteOuverte{
     width: 300px;
-    height: 200px;
+    height: auto;
 
     display: inline-block;
 
@@ -39,11 +50,13 @@ div.Ctn{
 
     margin: 1em;
     margin-bottom: 30px;
+
+    cursor: pointer;
   }
 
 div.InfoPorteFermer{
     width: 300px;
-    height: 200px;
+    height: auto;
 
     display: inline-block;
 
@@ -60,6 +73,8 @@ div.InfoPorteFermer{
 
     margin: 1em;
     margin-bottom: 30px;
+
+    cursor: pointer;
   }
 
   div.NavBar{
@@ -74,7 +89,7 @@ div.InfoPorteFermer{
 @media only screen and (orientation: landscape){
   div.InfoPorteOuverte{
   	width: 250px;
-    height: 200px;
+    height: auto;
 
     display: inline-block;
 
@@ -92,11 +107,13 @@ div.InfoPorteFermer{
 
     margin: 1em;
     margin-bottom: 30px;
+
+    cursor: pointer;
   }
 
   div.InfoPorteFermer{
   	width: 250px;
-    height: 180px;
+    height: auto;
 
     display: inline-block;
 
@@ -114,6 +131,8 @@ div.InfoPorteFermer{
 
     margin: 1em;
     margin-bottom: 30px;
+
+    cursor: pointer;
   }
 
   div.NavBar{

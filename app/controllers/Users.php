@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once("../app/models/Users.php");
 	include_once("../app/models/Admin.php");
 	class Users extends Controller
@@ -18,11 +19,23 @@
 			system ("gpio write  " . $NoPin . " on");
 			
 		}
+
+		public function AjouterEntreeLog(){
+
+			//$Date = date('Y-m-d H:i');
+			$User = $_SESSION["NomUser"];
+			$Action = $_POST["Action"];
+
+			$users = new modUsers();
+			$users->AjouterEntreeLog($User,$Action);
+		}
 		
 		public function Password(){
 
 			$users = new modUsers();
 			$retour = $users->ValiderPassword($_POST["password"]);
+
+			$_SESSION["NomUser"] = $retour["Nom"];
 
 			//echo json_encode($retour);
 			if ($retour["Type"] == '2') {
