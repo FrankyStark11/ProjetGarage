@@ -41,16 +41,18 @@ session_start();
 		}
 		
 		public function showResetPassword(){
-			parent::view('Admin/ResetPassword');
-		}
-		
-		public function resetmdp(){
 			$code = $_GET['code'];
 
 			echo $code;
-			/*$admin = new modAdmins();
+
+			//parent::view('Admin/ResetPassword');
+		}
+		
+		public function resetmdp(){
+			
+			$admin = new modAdmins();
 			$admin->ResetAdmin($_POST["password"]);
-			parent::view('Users/Index');*/
+			parent::view('Users/Index');
 		}
 		
 		public function EditDistributeurs(){
