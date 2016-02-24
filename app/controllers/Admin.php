@@ -11,8 +11,9 @@ session_start();
 		public function GestionCodes(){
 			$admin = new modAdmins();
 			$config = $admin->GetConfig();
+			$result = $admin->GetNomDistributeurs();
 
-			parent::view('Admin/GestionCode', ['config' => $config]);
+			parent::view('Admin/GestionCode', ['LstDistributeur'=>$result, 'config' => $config]);
 		}
 
 		public function GetAllPin(){
@@ -40,10 +41,18 @@ session_start();
 		}
 		
 		public function showResetPassword(){
-			parent::view('Admin/ResetPassword');
+			$code = $_GET['code'];
+
+			$admin = new modAdmins();
+			$retour = $admin->ValiderToken($code);
+			
+			if($retour == 1){
+				parent::view('Admin/ResetPassword');
+			}
 		}
 		
 		public function resetmdp(){
+			
 			$admin = new modAdmins();
 			$admin->ResetAdmin($_POST["password"]);
 			parent::view('Users/Index');

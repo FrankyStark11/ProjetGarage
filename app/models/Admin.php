@@ -119,10 +119,23 @@
 			Permet d'envoyer un email de modification du mot de passe
 		*/
 		function mdpOublie(){
+			$lecode = $this->generateRandomString();
+
+			//inscrit le code temporaire dans la bd
+			$db = $this->connectDB();
+			$sql = $db->prepare("INSERT INTO mdpOublie(String, PWDate) VALUES(:string, DATETIME('now','localtime'))");
+
+			$sql->bindValue(":string", $lecode);
+			
+			$sql->execute();
+			$db = null;
+			$sql = null;
+
+			//information d'envoie de couriel
 			$prov = $_SERVER['REMOTE_ADDR'];
 			$ip = "http://".$_SERVER['SERVER_ADDR'];
 			
-			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
+			$message = "\n\nUne demande de réinitialisation du mot de passe à été envoyée par ".$prov."\n\nPour initialiser le mot de passe, cliquer sur le lien suivant :\n\n".$ip."/index.php/Admin/showResetPassword?code=".$lecode."\n\nSi vous n'avez pas fait cette demande, s.v.p. ignorer ce message.";
 			$to      = $this->getCurrentEmail();
 
 			$subject = 'Réinitialisation administrateur';
@@ -130,7 +143,18 @@
 			'Reply-To: webmaster@example.com' . "\r\n" .
 			'X-Mailer: PHP/' . phpversion();
 
-			mail($to, $subject, $message, $headers);	
+			//envoie le email
+			mail($to, $subject, $message, $headers);
+		}
+
+		function generateRandomString($length = 10) {
+		    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		    $charactersLength = strlen($characters);
+		    $randomString = '';
+		    for ($i = 0; $i < $length; $i++) {
+		        $randomString .= $characters[rand(0, $charactersLength - 1)];
+		    }
+		    return $randomString;
 		}
 
 		function getCurrentEmail(){
@@ -263,5 +287,29 @@
 
 			return $config;		
 		}	
+
+		function ValiderToken($string){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("SELECT * FROM mdpOublie WHERE String = :token AND  PWDate > DATETIME('now','localtime','-10 minutes')");
+			$sql->bindValue(":token", $string);
+			
+			$sql->execute();
+			
+			$config =  $sql->fetch(PDO::FETCH_ASSOC);
+
+			if(isset($config["String"])){
+				$retour = true;
+			}
+			else{
+				$retour = false;
+			}
+			
+			$db = null;
+			$sql = null;
+
+			return $retour;	
+		}
+
 	}
 ?>
