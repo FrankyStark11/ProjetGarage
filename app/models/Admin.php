@@ -288,5 +288,29 @@
 
 			return $config;		
 		}	
+
+		function ValiderToken($string){
+			$db = $this->connectDB();
+
+			$sql = $db->prepare("SELECT *FROM mdpOublie WHERE String = :token AND PWDate < DATETIME('now','localtime','+10 minutes')");
+			$sql->bindValue(":token", $string);
+			
+			$sql->execute();
+			
+			$config =  $sql->fetch(PDO::FETCH_ASSOC);
+			
+			if($config["String"] != ""){
+				$retour = true;
+			}
+			else{
+				$retour = false;
+			}
+			
+			$db = null;
+			$sql = null;
+
+			return $retour;	
+		}
+
 	}
 ?>
