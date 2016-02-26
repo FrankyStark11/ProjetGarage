@@ -1,7 +1,7 @@
 <?php
 	//si une fausse accès à la page, on le kick
 
-	if($_SESSION["NomUser"] != "Proprio"){
+	if($_SESSION["NomUser"] != "Proprio" && $_SESSION["NomUser"] != "Ami"){
 		header("Refresh:0; ../Tools/AccesRefuse");
 	}
 ?>
