@@ -146,7 +146,9 @@
 											
 										?>
 									</select>
-									 <a href="/index.php/Admin/EditDistributeurs">+</a> 
+								</td>
+								<td>
+									 <a href="/index.php/Admin/EditDistributeurs"><img src="/images/add.png" height="25" width="25"></a>
 								</td>
 							</tr>
 							<tr>
