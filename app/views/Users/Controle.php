@@ -1,4 +1,9 @@
 <?php
+	//si une fausse accès à la page, on le kick
+
+	if($_SESSION["NomUser"] != "Proprio"){
+		header("Refresh:0; ../Users/AccesRefuse");
+	}
 ?>
 <html>
 

@@ -59,5 +59,9 @@
 			parent::view('Users/Controle');
 
 		}
+
+		public function AccesRefuse(){
+			parent::view('Users/refuse');
+		}
 	}
 ?>

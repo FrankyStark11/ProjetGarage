@@ -1,4 +1,11 @@
 <?php
+	//session_start();
+	
+	//si une fausse accès à la page, on le kick
+	if($_SESSION["NomUser"] != "Administrateur"){
+		header("Refresh:0; ../Users/AccesRefuse");
+	}
+
 	$distributeur = $data['LstDistributeur'];
 	$config = $data['config'];
 
