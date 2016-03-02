@@ -5,7 +5,7 @@
 	class Users extends Controller
 	{
 		public function Accueil(){
-			
+			parent::view('Users/Index');
 		}
 
 		public function AccesPorte(){
@@ -62,6 +62,15 @@
 
 		public function AccesRefuse(){
 			parent::view('Users/refuse');
+		}
+
+		/*
+			Permet de mettre fin à une session
+		*/
+		public function Quitter(){
+			$users = new modUsers();
+			$users->Quitter(); //Étape nécéssaire pour mettre fin à la session
+			$this->Accueil(); //retourne à l'accueil
 		}
 	}
 ?>

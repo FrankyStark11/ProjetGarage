@@ -95,5 +95,12 @@
 			}
 
 		}
+
+		/*
+			Permet de mettre fin à une session
+		*/
+		function Quitter(){
+			session_destroy(); //détruit la variable de session
+		}
 	}
 ?>

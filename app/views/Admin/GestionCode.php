@@ -39,7 +39,7 @@
 	<body onload="initialiser()">
 	<div class="NavBar">
 		<ul>
-		  <li><a class="quit" href="/index.php/Admin/Accueil"> Quitter </a></li>
+		  <li><a class="quit" href="/index.php/Users/Quitter"> Quitter </a></li>
 		</ul>
 	</div>
 	<div class="Ctn" align="center">
