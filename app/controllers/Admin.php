@@ -84,6 +84,15 @@ session_start();
 			$this->GestionCodes();
 		}
 
+		/*
+			Kick le user lors du délais dépassé
+		*/
+		public function KickUserTimeOut(){
+			$admin = new modAdmins();
+			$admin->KickUserTimeOut();
+			parent::view('Admin/UserKick');
+		}
+
 		/*==============================================
 			Gestion de securité
 		================================================*/
@@ -111,6 +120,7 @@ session_start();
 			$admin->ChangeTimer($_POST["timer"]);
 			$this->GestionCodes();
 		}
+
 
 			
 	}

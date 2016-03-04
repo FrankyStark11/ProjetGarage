@@ -311,5 +311,12 @@
 			return $retour;	
 		}
 
+		/*
+			Kick le user lors du délais dépassé
+		*/
+		public function KickUserTimeOut(){
+			session_destroy(); //détruit la variable de session
+		}
+
 	}
 ?>
