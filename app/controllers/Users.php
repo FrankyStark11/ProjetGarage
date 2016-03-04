@@ -60,9 +60,6 @@
 
 		}
 
-		public function AccesRefuse(){
-			parent::view('Users/refuse');
-		}
 
 		/*
 			Permet de mettre fin à une session

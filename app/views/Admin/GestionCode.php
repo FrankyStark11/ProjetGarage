@@ -3,7 +3,7 @@
 	
 	//si une fausse accès à la page, on le kick
 	if($_SESSION["NomUser"] != "Administrateur"){
-		header("Refresh:0; ../Users/AccesRefuse");
+		header("Refresh:0; ../Tools/AccesRefuse");
 	}
 
 	$distributeur = $data['LstDistributeur'];
@@ -32,7 +32,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Kick le user après X temps -->
-		<meta http-equiv="refresh" content="6;url=/index.php/Admin/KickUserTimeOut" />
+		<meta http-equiv="refresh" content="6;url=/index.php/Tools/KickUserTimeOut" />
 
 		<script src="/js/javascript.js"></script>
 
