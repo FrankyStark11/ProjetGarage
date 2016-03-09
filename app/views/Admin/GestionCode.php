@@ -242,8 +242,10 @@
 						</td>
 						<td>
 							<select name="Mode" class="TextMpd">
-								<option selected value="in"> IN </option>
-								<option value="out"> OUT </option>
+								<option selected value="in"> 22 </option>
+								<option value="out"> 23 </option>
+								<option value="out"> 24 </option>
+								<option value="out"> 25 </option>
 							</select>
 						</td>
 					</tr>
