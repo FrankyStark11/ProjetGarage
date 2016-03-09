@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Kick le user après X temps -->
-		<meta http-equiv="refresh" content="6;url=/index.php/Tools/KickUserTimeOut" />
+		<meta http-equiv="refresh" content="600;url=/index.php/Tools/KickUserTimeOut" />
 
 		<script src="/js/javascript.js"></script>
 

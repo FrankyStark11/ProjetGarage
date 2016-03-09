@@ -39,7 +39,7 @@
 						<td><button class="digit" type="button" name="9" value="9" onclick="feedPassword(this)"><span>9</span></button></td>
 					</tr>
 					<tr align="center">
-						<td><button class="digit" type="button" action="/index.php/Admin/mdpOublie" name="0" value="" ></td>
+						<td><button class="digit" type="button" onclick="window.location.href='/index.php/Admin/mdpOublie'" name="0" value="" ></td>
 						<td><button class="digit" type="button" name="0" value="0" onclick="feedPassword(this)"><span>0</span></button></td>
 						<td><button class="digit" type="button" name="9" value="<=" onclick="EffacePassword()"><span>Back</span></button></td>
 					</tr>
