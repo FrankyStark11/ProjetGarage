@@ -51,7 +51,7 @@
 			}
 			else
 			{
-				parent::view('Users/Index');
+				parent::view('Users/ErrorPageLog');
 			}
 		}
 

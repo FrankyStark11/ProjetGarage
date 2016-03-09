@@ -448,6 +448,37 @@ div.ConfigBox{
     opacity: 1;
     right: 0;
   }
+
+  .ErreurBtn{
+
+    background-color: red;
+
+    font-size: 28px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    width: 453px;
+    height: 50px;
+    display: inline-block;
+
+    transition: all 0.5s;
+    cursor: pointer;
+    outline-style: none;
+
+  }
+  .ErreurBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
 }
 
 @media only screen and (orientation: portrait){
@@ -499,6 +530,46 @@ div.ConfigBox{
   }
 
   .confirmer:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .ErreurBtn{
+    background-color: red;
+
+    font-size: 28px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    width: 303px;
+    height: 90px;
+    display: inline-block;
+
+    transition: all 0.5s;
+    cursor: pointer;
+    outline-style: none;
+
+  }
+  .ErreurBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+
+  button.ErreurBtn:hover{
+    background-color: orange;
+  }
+
+  .ErreurBtn:hover span:after {
     opacity: 1;
     right: 0;
   }
