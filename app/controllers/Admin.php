@@ -36,18 +36,23 @@ session_start();
 			$admin->mdpOublie();
 			parent::view('Users/Index');
 		}
-		
+				
 		public function showResetPassword(){
-			$code = $_GET['code'];
+			if(isset($_GET['code'])){
+				$code = $_GET['code'];
 
-			$admin = new modAdmins();
-			$retour = $admin->ValiderToken($code);
-			
-			if($retour == 1){
-				parent::view('Admin/ResetPassword');
+				$admin = new modAdmins();
+				$retour = $admin->ValiderToken($code);
+				
+				if($retour == 1){
+					parent::view('Admin/ResetPassword');
+				}
+			}
+			else{
+				parent::view('Tools/refuse');
 			}
 		}
-		
+
 		public function resetmdp(){
 			
 			$admin = new modAdmins();

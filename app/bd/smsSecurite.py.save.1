@@ -1,4 +1,4 @@
-from time import sleep
+àfrom time import sleep
 import RPi.GPIO as GPIO
 import os
 import datetime
@@ -6,6 +6,7 @@ import sqlite3
 import smtplib
 
 fromaddr = 'garage.raspberry@gmail.com'
+toaddrs = 'otid91@gmail.com'
 
 username = 'garage.raspberry@gmail.com'
 password = 'garage.p!'
@@ -23,6 +24,8 @@ cur = conn.cursor()
 cur.execute('''SELECT NoPin,Etat FROM pinState''')
 rows = cur.fetchall()
 
+
+
 cur2 = conn.cursor()
 cur2.execute('''SELECT SecureOnOff FROM Securite''')
 OnOff = cur2.fetchone()
@@ -33,13 +36,7 @@ GPIO.setmode (GPIO.BOARD)
 for row in rows:
 	GPIO.setup(row[0], GPIO.IN)
 
-#while OnOff[0] == 'ON':
-while True:
-	
-	cur3 = conn.cursor()
-	cur3.execute('''SELECT Telephone || Extention AS Telephone FROM Securite INNER JOIN Distributeur ON Distributeur = Nom''')
-	toaddrs = cur3.fetchone()
-	
+while OnOff[0] == 'ON':
 	os.system('clear')
 	
 	cur.execute('''SELECT NoPin,Etat FROM pinState''')
@@ -64,7 +61,7 @@ while True:
 		msg = 'Le systeme a detecte quune porte est presentement ouverte'
 		if(ouvert > 1):
 			msg = 'Le systeme a detecte que ' + str(ouvert) + ' portes ont presentement ouvertent'
-		server.sendmail(fromaddr, toaddrs[0], msg)
+		server.sendmail(fromaddr, toaddrs, msg)
 		ouvert = 0
 	
 	sleep(10)
