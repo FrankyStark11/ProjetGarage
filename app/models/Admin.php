@@ -311,6 +311,14 @@
 			return $retour;	
 		}
 
+		/*
+		Permet de mettre à jour la BD
+		*/
+		function ActiverScriptProtection(){
+			echo(exec('python3 ../app/bd/PorteDelais.py 2>&1')); //execute le script pour les scores
+			echo(exec('python3 ../app/bd/smsSecurite.py 2>&1')); //execute le script pour les matchs
+		}
+
 
 	}
 ?>

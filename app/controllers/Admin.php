@@ -101,6 +101,8 @@ session_start();
 			$set = "OFF";
 			if(isset($_POST["check"])){
 				$set = "ON";
+				//active les scripts python
+				$admin->ActiverScriptProtection();
 			}
 
 			$admin->ChangeCheckSMS($set);
